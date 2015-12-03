@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- _id = GUID 0d4b8d24-8197-4a86-87b7-9e9da2533868;
 	- _myState = 8192;
 	- _name = "NuitInfo";
-	- _modifiedTimeWeak = 12.3.2015::20:27:8;
+	- _modifiedTimeWeak = 12.3.2015::21:8:16;
 	- _lastID = 2;
 	- _UserColors = { IRPYRawContainer 
 		- size = 16;
@@ -259,7 +259,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			}
 			- _name = "Model1";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "12.3.2015::20:24:5";
+			- _lastModifiedTime = "12.3.2015::21:8:16";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID b2d49027-3ca3-4e54-b38b-ac43a118b552;
 				- m_type = 0;
@@ -345,12 +345,12 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
 						- _class = "";
-						- _name = "CentreTraitementUrgences";
+						- _name = "CentreTraitementUrgence";
 						- _id = GUID 0716b4a7-e401-47c0-bb16-4a95dcc003dd;
 					}
 					- m_pParent = GUID f21ac7cf-13b6-4d90-b27f-8663383c6c07;
 					- m_name = { CGIText 
-						- m_str = "CentreTraitementUrgences";
+						- m_str = "CentreTraitementUrgence";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -465,8 +465,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "IAssociationEnd";
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
-						- _class = "CentreTraitementUrgences";
-						- _name = "itsPompier";
+						- _class = "CentreTraitementUrgence";
+						- _name = "unPompier";
 						- _id = GUID 115e922e-4328-4c33-8d73-cefd85abb4e8;
 					}
 					- m_pParent = ;
@@ -514,7 +514,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
 						- _class = "Pompier";
-						- _name = "itsCentreTraitementUrgences";
+						- _name = "unCentreTraitementUrgence";
 						- _id = GUID 2560029d-60c8-4441-a696-3b9d2b5a59a4;
 					}
 					- m_pInstance = { IObjectLinkHandle 
@@ -524,16 +524,16 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "";
 					}
 					- m_bShowSourceMultiplicity = 1;
-					- m_bShowSourceRole = 0;
+					- m_bShowSourceRole = 1;
 					- m_bShowTargetMultiplicity = 1;
-					- m_bShowTargetRole = 0;
+					- m_bShowTargetRole = 1;
 					- m_bShowLinkName = 1;
 					- m_bShowSpecificType = 0;
 					- m_bInstance = 0;
 					- m_bShowQualifier1 = 1;
 					- m_bShowQualifier2 = 1;
 					- m_sourceRole = { CGIText 
-						- m_str = "";
+						- m_str = "unCentreTraitementUrgences";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -543,9 +543,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_position = 1 0 0  ;
 						- m_nIdent = 2;
 						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 2;
 					}
 					- m_targetRole = { CGIText 
-						- m_str = "";
+						- m_str = "unPompier";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -555,6 +556,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_position = 1 0 0  ;
 						- m_nIdent = 3;
 						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 0;
 					}
 					- m_sourceMultiplicity = { CGIText 
 						- m_str = "1";
@@ -690,8 +692,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "IAssociationEnd";
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
-						- _class = "CentreTraitementUrgences";
-						- _name = "itsTemoin";
+						- _class = "CentreTraitementUrgence";
+						- _name = "unTemoin";
 						- _id = GUID 6bcfd9f3-fb9c-42b5-ab6d-10b23fe0b0c2;
 					}
 					- m_pParent = ;
@@ -739,7 +741,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
 						- _class = "Temoin";
-						- _name = "itsCentreTraitementUrgences";
+						- _name = "unCentreTraitementUrgence";
 						- _id = GUID 8ab0ea57-443c-4231-b4a9-918fa9b63166;
 					}
 					- m_pInstance = { IObjectLinkHandle 
@@ -749,16 +751,16 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "";
 					}
 					- m_bShowSourceMultiplicity = 1;
-					- m_bShowSourceRole = 0;
+					- m_bShowSourceRole = 1;
 					- m_bShowTargetMultiplicity = 1;
-					- m_bShowTargetRole = 0;
+					- m_bShowTargetRole = 1;
 					- m_bShowLinkName = 1;
 					- m_bShowSpecificType = 0;
 					- m_bInstance = 0;
 					- m_bShowQualifier1 = 1;
 					- m_bShowQualifier2 = 1;
 					- m_sourceRole = { CGIText 
-						- m_str = "";
+						- m_str = "unCentreTraitementUrgence";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -768,9 +770,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_position = 1 0 0  ;
 						- m_nIdent = 2;
 						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 0;
 					}
 					- m_targetRole = { CGIText 
-						- m_str = "";
+						- m_str = "unTemoin";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -780,6 +783,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_position = 1 0 0  ;
 						- m_nIdent = 3;
 						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 2;
 					}
 					- m_sourceMultiplicity = { CGIText 
 						- m_str = "1";
@@ -868,7 +872,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
 						- _class = "Pompier";
-						- _name = "itsTemoin";
+						- _name = "unTemoin";
 						- _id = GUID c2b6aed1-1cb0-4f7d-b011-15b3c8c53d90;
 					}
 					- m_pParent = ;
@@ -916,7 +920,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
 						- _class = "Temoin";
-						- _name = "itsPompier";
+						- _name = "unPompier";
 						- _id = GUID c619eeca-67b8-42e6-9d64-8f02f9005eca;
 					}
 					- m_pInstance = { IObjectLinkHandle 
@@ -926,16 +930,16 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "";
 					}
 					- m_bShowSourceMultiplicity = 1;
-					- m_bShowSourceRole = 0;
+					- m_bShowSourceRole = 1;
 					- m_bShowTargetMultiplicity = 1;
-					- m_bShowTargetRole = 0;
+					- m_bShowTargetRole = 1;
 					- m_bShowLinkName = 1;
 					- m_bShowSpecificType = 0;
 					- m_bInstance = 0;
 					- m_bShowQualifier1 = 1;
 					- m_bShowQualifier2 = 1;
 					- m_sourceRole = { CGIText 
-						- m_str = "";
+						- m_str = "unPompier";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -945,9 +949,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_position = 1 0 0  ;
 						- m_nIdent = 2;
 						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 0;
 					}
 					- m_targetRole = { CGIText 
-						- m_str = "";
+						- m_str = "unTemoin";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -957,6 +962,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_position = 1 0 0  ;
 						- m_nIdent = 3;
 						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 2;
 					}
 					- m_sourceMultiplicity = { CGIText 
 						- m_str = "1";
@@ -1093,7 +1099,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
 						- _class = "Pompier";
-						- _name = "itsVictime";
+						- _name = "unVictime";
 						- _id = GUID 3fee8808-baa2-4070-8032-63bb6f95571c;
 					}
 					- m_pParent = ;
@@ -1130,18 +1136,18 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 2 327 284  327 212  ;
+					- m_arrow = 2 269 272  269 186  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 1198 598 ;
-					- m_TargetPort = 542 950 ;
+					- m_SourcePort = 1198 501 ;
+					- m_TargetPort = 544 743 ;
 					- m_pInverseModelObject = { IAssociationEndHandle 
 						- _m2Class = "IAssociationEnd";
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
 						- _class = "Victime";
-						- _name = "itsPompier";
+						- _name = "unPompier";
 						- _id = GUID f5f0a59f-880e-443f-bf0c-f3661cd9c6e6;
 					}
 					- m_pInstance = { IObjectLinkHandle 
@@ -1151,16 +1157,16 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "";
 					}
 					- m_bShowSourceMultiplicity = 1;
-					- m_bShowSourceRole = 0;
+					- m_bShowSourceRole = 1;
 					- m_bShowTargetMultiplicity = 1;
-					- m_bShowTargetRole = 0;
+					- m_bShowTargetRole = 1;
 					- m_bShowLinkName = 1;
 					- m_bShowSpecificType = 0;
 					- m_bInstance = 0;
 					- m_bShowQualifier1 = 1;
 					- m_bShowQualifier2 = 1;
 					- m_sourceRole = { CGIText 
-						- m_str = "";
+						- m_str = "unPompier";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -1170,9 +1176,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_position = 1 0 0  ;
 						- m_nIdent = 2;
 						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 0;
 					}
 					- m_targetRole = { CGIText 
-						- m_str = "";
+						- m_str = "unVictime";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -1182,6 +1189,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_position = 1 0 0  ;
 						- m_nIdent = 3;
 						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 2;
 					}
 					- m_sourceMultiplicity = { CGIText 
 						- m_str = "1";
@@ -1328,16 +1336,16 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "";
 					}
 					- m_bShowSourceMultiplicity = 1;
-					- m_bShowSourceRole = 0;
+					- m_bShowSourceRole = 1;
 					- m_bShowTargetMultiplicity = 1;
-					- m_bShowTargetRole = 0;
+					- m_bShowTargetRole = 1;
 					- m_bShowLinkName = 1;
 					- m_bShowSpecificType = 0;
 					- m_bInstance = 0;
 					- m_bShowQualifier1 = 1;
 					- m_bShowQualifier2 = 1;
 					- m_sourceRole = { CGIText 
-						- m_str = "";
+						- m_str = "unTemoin";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -1347,9 +1355,10 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_position = 1 0 0  ;
 						- m_nIdent = 2;
 						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 4;
 					}
 					- m_targetRole = { CGIText 
-						- m_str = "";
+						- m_str = "unVictime";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -1359,6 +1368,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_position = 1 0 0  ;
 						- m_nIdent = 3;
 						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 0;
 					}
 					- m_sourceMultiplicity = { CGIText 
 						- m_str = "1";
@@ -1720,7 +1730,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			}
 			- _name = "UseCaseDiagramm";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "12.3.2015::20:27:8";
+			- _lastModifiedTime = "12.3.2015::21:11:18";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID 1538cecd-e62b-42e2-8920-efe94a67e5bf;
 				- m_type = 0;
@@ -1872,7 +1882,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.0489381 0 0 0.124343 88.3869 11.6655 ;
+					- m_transform = 0.0489381 0 0 0.124343 81.3869 62.6655 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -2210,7 +2220,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.393322 0 0 0.318548 348 6.10352e-005 ;
+					- m_transform = 0.393322 0 0 0.318548 340 6.10352e-005 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 0  0 1240  1228 1240  1228 0  ;
 					- m_nNameFormat = 0;
@@ -2227,12 +2237,12 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
 						- _class = "";
-						- _name = "CentreTraitementUrgences";
+						- _name = "CentreTraitementUrgence";
 						- _id = GUID 0716b4a7-e401-47c0-bb16-4a95dcc003dd;
 					}
 					- m_pParent = GUID d6aeb260-409c-45f0-b0b9-ff6e973c647b;
 					- m_name = { CGIText 
-						- m_str = "CentreTraitementUrgences";
+						- m_str = "CentreTraitementUrgence";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -3214,7 +3224,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
 						- _class = "Relaie les informations";
-						- _name = "itsCentreTraitementUrgences";
+						- _name = "itsCentreTraitementUrgence";
 						- _id = GUID 6a2b7d4b-373b-4914-a1e8-643125e2ff3d;
 					}
 					- m_pParent = ;
@@ -3260,7 +3270,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "IAssociationEnd";
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
-						- _class = "CentreTraitementUrgences";
+						- _class = "CentreTraitementUrgence";
 						- _name = "itsRelaie les informations";
 						- _id = GUID d6a53666-842c-42e5-8888-fdbf184ae789;
 					}
@@ -3435,7 +3445,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "IAssociationEnd";
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
-						- _class = "CentreTraitementUrgences";
+						- _class = "CentreTraitementUrgence";
 						- _name = "itsDonne son avis nm\édical";
 						- _id = GUID 5d46aeff-4992-4cb1-8178-d962832ea791;
 					}
@@ -3483,7 +3493,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _filename = "Default.sbs";
 						- _subsystem = "Default";
 						- _class = "Donne son avis nm\édical";
-						- _name = "itsCentreTraitementUrgences";
+						- _name = "itsCentreTraitementUrgence";
 						- _id = GUID 5d8620c5-4459-48ad-8abb-18744406314e;
 					}
 					- m_pInstance = { IObjectLinkHandle 
@@ -3905,7 +3915,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.126661 0 0 0.0550887 725.253 604.055 ;
+					- m_transform = 0.126661 0 0 0.0550887 723.253 604.055 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -4668,7 +4678,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 2 432 253  514 253  ;
+					- m_arrow = 2 424 253  506 253  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
@@ -4752,7 +4762,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 2 525 253  514 253  ;
+					- m_arrow = 2 517 253  506 253  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
@@ -4836,7 +4846,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 2 626 253  514 253  ;
+					- m_arrow = 2 618 253  506 253  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
@@ -5594,7 +5604,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 3 319 400  325 320  271 191  ;
+					- m_arrow = 3 319 400  324 332  281 229  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 0;
