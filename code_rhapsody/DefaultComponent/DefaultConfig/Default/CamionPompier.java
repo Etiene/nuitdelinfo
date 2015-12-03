@@ -10,6 +10,8 @@
 
 package Default;
 
+//## dependency TimeUnit 
+import java.util.concurrent.TimeUnit;
 //## auto_generated
 import com.ibm.rational.rhapsody.oxf.*;
 //## auto_generated
@@ -124,7 +126,16 @@ public class CamionPompier implements RiJStateConcept, Animated {
         
         //#[ operation enroute() 
         System.out.println("La camion de pompier est en route...");
-        System.out.println("le camion est arrive");
+        try {
+        		TimeUnit.SECONDS.sleep(5);   
+        		System.out.println("le camion est arrive");  
+        		unPompier.gen(new EventCamionPompierArrive());
+        		
+        	} catch (InterruptedException e) {
+        		// TODO Auto-generated catch block
+        		e.printStackTrace();
+        	}
+        
         
         
         //#]

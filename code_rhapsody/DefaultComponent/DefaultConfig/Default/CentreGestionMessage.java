@@ -349,6 +349,9 @@ public class CentreGestionMessage implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("1");
             EnAttente_exit();
+            //#[ transition 1 
+            relayerMessage();
+            //#]
             TraitementEtEnvoie_entDef();
             animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
@@ -410,9 +413,6 @@ public class CentreGestionMessage implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("2");
             TraitementEtEnvoie_exit();
-            //#[ transition 2 
-            relayerMessage();
-            //#]
             EnAttente_entDef();
             animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;

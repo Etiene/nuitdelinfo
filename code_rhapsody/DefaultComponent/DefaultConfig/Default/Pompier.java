@@ -50,8 +50,6 @@ public class Pompier implements RiJStateConcept, Animated {
     
     protected Temoin unTemoin;		//## link unTemoin 
     
-    protected Victime unVictime;		//## link unVictime 
-    
     //#[ ignore 
     public static final int RiJNonState=0;
     public static final int EnAttente=1;
@@ -266,48 +264,6 @@ public class Pompier implements RiJStateConcept, Animated {
     public void _clearUnTemoin() {
         animInstance().notifyRelationCleared("unTemoin");
         unTemoin = null;
-    }
-    
-    //## auto_generated 
-    public Victime getUnVictime() {
-        return unVictime;
-    }
-    
-    //## auto_generated 
-    public void __setUnVictime(Victime p_Victime) {
-        unVictime = p_Victime;
-        if(p_Victime != null)
-            {
-                animInstance().notifyRelationAdded("unVictime", p_Victime);
-            }
-        else
-            {
-                animInstance().notifyRelationCleared("unVictime");
-            }
-    }
-    
-    //## auto_generated 
-    public void _setUnVictime(Victime p_Victime) {
-        if(unVictime != null)
-            {
-                unVictime.__setUnPompier(null);
-            }
-        __setUnVictime(p_Victime);
-    }
-    
-    //## auto_generated 
-    public void setUnVictime(Victime p_Victime) {
-        if(p_Victime != null)
-            {
-                p_Victime._setUnPompier(this);
-            }
-        _setUnVictime(p_Victime);
-    }
-    
-    //## auto_generated 
-    public void _clearUnVictime() {
-        animInstance().notifyRelationCleared("unVictime");
-        unVictime = null;
     }
     
     //## auto_generated 
@@ -597,10 +553,9 @@ public class Pompier implements RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {
         
-        msg.add("unTemoin", false, true, unTemoin);
         msg.add("unCentreTraitementUrgence", false, true, unCentreTraitementUrgence);
-        msg.add("unVictime", false, true, unVictime);
         msg.add("unCamionPompier", false, true, unCamionPompier);
+        msg.add("unTemoin", false, true, unTemoin);
     }
     /** An inner class added as instrumentation for animation */
     public class Animate extends AnimInstance { 

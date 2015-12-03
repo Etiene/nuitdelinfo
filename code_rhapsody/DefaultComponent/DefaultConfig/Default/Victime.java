@@ -46,8 +46,6 @@ public class Victime implements RiJStateConcept, Animated {
     
     protected CamionPompier unCamionPompier;		//## link unCamionPompier 
     
-    protected Pompier unPompier;		//## link unPompier 
-    
     protected Temoin unTemoin;		//## link unTemoin 
     
     //#[ ignore 
@@ -163,48 +161,6 @@ public class Victime implements RiJStateConcept, Animated {
     public void _clearUnCamionPompier() {
         animInstance().notifyRelationCleared("unCamionPompier");
         unCamionPompier = null;
-    }
-    
-    //## auto_generated 
-    public Pompier getUnPompier() {
-        return unPompier;
-    }
-    
-    //## auto_generated 
-    public void __setUnPompier(Pompier p_Pompier) {
-        unPompier = p_Pompier;
-        if(p_Pompier != null)
-            {
-                animInstance().notifyRelationAdded("unPompier", p_Pompier);
-            }
-        else
-            {
-                animInstance().notifyRelationCleared("unPompier");
-            }
-    }
-    
-    //## auto_generated 
-    public void _setUnPompier(Pompier p_Pompier) {
-        if(unPompier != null)
-            {
-                unPompier.__setUnVictime(null);
-            }
-        __setUnPompier(p_Pompier);
-    }
-    
-    //## auto_generated 
-    public void setUnPompier(Pompier p_Pompier) {
-        if(p_Pompier != null)
-            {
-                p_Pompier._setUnVictime(this);
-            }
-        _setUnPompier(p_Pompier);
-    }
-    
-    //## auto_generated 
-    public void _clearUnPompier() {
-        animInstance().notifyRelationCleared("unPompier");
-        unPompier = null;
     }
     
     //## auto_generated 
@@ -566,7 +522,6 @@ public class Victime implements RiJStateConcept, Animated {
     public void addRelations(AnimRelations msg) {
         
         msg.add("unTemoin", false, true, unTemoin);
-        msg.add("unPompier", false, true, unPompier);
         msg.add("unCamionPompier", false, true, unCamionPompier);
     }
     /** An inner class added as instrumentation for animation */

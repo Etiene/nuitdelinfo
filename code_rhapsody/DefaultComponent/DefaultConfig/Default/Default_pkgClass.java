@@ -53,14 +53,6 @@ public class Default_pkgClass {
     }
     
     private static void renameGlobalInstances() {
-        if(itsPompier != null)
-            {
-                AnimServices.setInstanceName(itsPompier, "itsPompier");
-            }
-        if(itsCamionPompier != null)
-            {
-                AnimServices.setInstanceName(itsCamionPompier, "itsCamionPompier");
-            }
         if(itsCentreGestionMessage != null)
             {
                 AnimServices.setInstanceName(itsCentreGestionMessage, "itsCentreGestionMessage");
@@ -68,6 +60,14 @@ public class Default_pkgClass {
         if(itsCentreTraitementUrgence != null)
             {
                 AnimServices.setInstanceName(itsCentreTraitementUrgence, "itsCentreTraitementUrgence");
+            }
+        if(itsPompier != null)
+            {
+                AnimServices.setInstanceName(itsPompier, "itsPompier");
+            }
+        if(itsCamionPompier != null)
+            {
+                AnimServices.setInstanceName(itsCamionPompier, "itsCamionPompier");
             }
         if(itsVictime != null)
             {
@@ -87,6 +87,14 @@ public class Default_pkgClass {
         itsPompier = new Pompier(p_thread);
         itsTemoin = new Temoin(p_thread);
         itsVictime = new Victime(p_thread);
+        itsTemoin.setUnCentreGestionMessage(itsCentreGestionMessage);
+        itsCentreGestionMessage.setUnCentreTraitementUrgence(itsCentreTraitementUrgence);
+        itsPompier.setUnCentreTraitementUrgence(itsCentreTraitementUrgence);
+        itsTemoin.setUnVictime(itsVictime);
+        itsPompier.setUnCamionPompier(itsCamionPompier);
+        itsCamionPompier.setUnVictime(itsVictime);
+        itsPompier.setUnTemoin(itsTemoin);
+        itsCentreTraitementUrgence.setUnTemoin(itsTemoin);
         renameGlobalInstances();
     }
     

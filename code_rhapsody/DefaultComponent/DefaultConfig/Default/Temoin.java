@@ -57,8 +57,7 @@ public class Temoin implements RiJStateConcept, Animated {
     public static final int VaHopital=1;
     public static final int Part=2;
     public static final int Marche=3;
-    public static final int DecouvreVictime=4;
-    public static final int Attente=5;
+    public static final int Attente=4;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -127,6 +126,23 @@ public class Temoin implements RiJStateConcept, Animated {
         
     }
     
+    //## operation ditALaVictime() 
+    public void ditALaVictime() {
+        try {
+            animInstance().notifyMethodEntered("ditALaVictime",
+               new ArgData[] {
+               });
+        
+        //#[ operation ditALaVictime() 
+        unVictime.gen(new EventVaHopital());
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
     //## operation previentSecours() 
     public void previentSecours() {
         try {
@@ -136,7 +152,7 @@ public class Temoin implements RiJStateConcept, Animated {
         
         //#[ operation previentSecours() 
         System.out.println("Temoin previent le centre des appels");
-        unCentreTraitementUrgence.gen(new EventMessageRecu());
+        unCentreGestionMessage.gen(new EventMessageRecu());
         //#]
         }
         finally {
@@ -354,11 +370,6 @@ public class Temoin implements RiJStateConcept, Animated {
         public void rootState_add(AnimStates animStates) {
             animStates.add("ROOT");
             switch (rootState_subState) {
-                case DecouvreVictime:
-                {
-                    DecouvreVictime_add(animStates);
-                }
-                break;
                 case Marche:
                 {
                     Marche_add(animStates);
@@ -396,11 +407,6 @@ public class Temoin implements RiJStateConcept, Animated {
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (rootState_active) {
-                case DecouvreVictime:
-                {
-                    res = DecouvreVictime_takeEvent(id);
-                }
-                break;
                 case Marche:
                 {
                     res = Marche_takeEvent(id);
@@ -443,11 +449,6 @@ public class Temoin implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public void DecouvreVictime_add(AnimStates animStates) {
-            animStates.add("ROOT.DecouvreVictime");
-        }
-        
-        //## statechart_method 
         public void Attente_add(AnimStates animStates) {
             animStates.add("ROOT.Attente");
         }
@@ -463,20 +464,12 @@ public class Temoin implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             animInstance().notifyTransitionStarted("1");
             Marche_exit();
-            DecouvreVictime_entDef();
+            //#[ transition 1 
+            previentSecours();
+            //#]
+            Attente_entDef();
             animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public int DecouvreVictime_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
-                {
-                    res = DecouvreVictimeTakeNull();
-                }
-            
             return res;
         }
         
@@ -484,10 +477,6 @@ public class Temoin implements RiJStateConcept, Animated {
         public int VaHopital_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             return res;
-        }
-        
-        //## statechart_method 
-        public void DecouvreVictimeExit() {
         }
         
         //## statechart_method 
@@ -518,10 +507,6 @@ public class Temoin implements RiJStateConcept, Animated {
         //## statechart_method 
         public void VaHopital_entDef() {
             VaHopital_enter();
-        }
-        
-        //## statechart_method 
-        public void DecouvreVictimeEnter() {
         }
         
         //## statechart_method 
@@ -573,27 +558,6 @@ public class Temoin implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
-        public int DecouvreVictimeTakeNull() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("2");
-            DecouvreVictime_exit();
-            //#[ transition 2 
-            previentSecours();
-            //#]
-            Attente_entDef();
-            animInstance().notifyTransitionEnded("2");
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
-        public void DecouvreVictime_exit() {
-            popNullConfig();
-            DecouvreVictimeExit();
-            animInstance().notifyStateExited("ROOT.DecouvreVictime");
-        }
-        
-        //## statechart_method 
         public int Part_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             return res;
@@ -612,25 +576,19 @@ public class Temoin implements RiJStateConcept, Animated {
         //## statechart_method 
         public int AttenteTakeEventVaHopital() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("4");
+            animInstance().notifyTransitionStarted("3");
             Attente_exit();
+            //#[ transition 3 
+            ditALaVictime();
+            //#]
             VaHopital_entDef();
-            animInstance().notifyTransitionEnded("4");
+            animInstance().notifyTransitionEnded("3");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
         public void AttenteEnter() {
-        }
-        
-        //## statechart_method 
-        public void DecouvreVictime_enter() {
-            animInstance().notifyStateEntered("ROOT.DecouvreVictime");
-            pushNullConfig();
-            rootState_subState = DecouvreVictime;
-            rootState_active = DecouvreVictime;
-            DecouvreVictimeEnter();
         }
         
         //## statechart_method 
@@ -651,11 +609,6 @@ public class Temoin implements RiJStateConcept, Animated {
             rootState_subState = VaHopital;
             rootState_active = VaHopital;
             VaHopitalEnter();
-        }
-        
-        //## statechart_method 
-        public void DecouvreVictime_entDef() {
-            DecouvreVictime_enter();
         }
         
         //## statechart_method 
@@ -686,10 +639,10 @@ public class Temoin implements RiJStateConcept, Animated {
         //## statechart_method 
         public int AttenteTakeEventCamionPompierArrive() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("3");
+            animInstance().notifyTransitionStarted("2");
             Attente_exit();
             Part_entDef();
-            animInstance().notifyTransitionEnded("3");
+            animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -778,9 +731,9 @@ public class Temoin implements RiJStateConcept, Animated {
     public void addRelations(AnimRelations msg) {
         
         msg.add("unVictime", false, true, unVictime);
-        msg.add("unPompier", false, true, unPompier);
-        msg.add("unCentreTraitementUrgence", false, true, unCentreTraitementUrgence);
         msg.add("unCentreGestionMessage", false, true, unCentreGestionMessage);
+        msg.add("unCentreTraitementUrgence", false, true, unCentreTraitementUrgence);
+        msg.add("unPompier", false, true, unPompier);
     }
     /** An inner class added as instrumentation for animation */
     public class Animate extends AnimInstance { 

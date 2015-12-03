@@ -130,6 +130,8 @@ public class CentreTraitementUrgence implements RiJStateConcept, Animated {
                });
         
         //#[ operation ordreIntervention() 
+        System.out.println("il est necessaire de faire une intervention");
+        unPompier.gen(new EventUrgenceRecu());
         //#]
         }
         finally {
@@ -591,9 +593,9 @@ public class CentreTraitementUrgence implements RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {
         
-        msg.add("unTemoin", false, true, unTemoin);
-        msg.add("unPompier", false, true, unPompier);
         msg.add("unCentreGestionMessage", false, true, unCentreGestionMessage);
+        msg.add("unPompier", false, true, unPompier);
+        msg.add("unTemoin", false, true, unTemoin);
     }
     /** An inner class added as instrumentation for animation */
     public class Animate extends AnimInstance { 

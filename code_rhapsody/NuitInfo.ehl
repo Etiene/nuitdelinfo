@@ -1,4 +1,8 @@
 [Op Calls]
 [Events]
+itsCentreTraitementUrgence->GEN(EventPasIntervention())`CentreTraitementUrgence
+Temoin->GEN(EventDecouvreVictime())`Default::Temoin
+itsCentreTraitementUrgence:CentreTraitementUrgence->GEN(EventPasIntervention())`Default::CentreTraitementUrgence
+itsTemoin:Temoin->GEN(EventDecouvreVictime())`Default::Temoin
 itsTemoin->GEN(EventDecouvreVictime())`Temoin
 [Breakpoints]
