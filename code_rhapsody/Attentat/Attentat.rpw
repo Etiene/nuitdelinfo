@@ -30,8 +30,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "DiagrammeClasse";
 				- _id = GUID 05e5215c-3824-456d-ad8b-f64f5b7d8630;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 738 328 ;
+			- _UpLeft = -3 0 ;
+			- _DownRight = 735 328 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
 		}
@@ -58,8 +58,8 @@ I-Logix-RPY-Archive version 8.10.0 * 6930133
 				- _name = "UseCaseDiagramme";
 				- _id = GUID 1e083d65-0f84-4e76-ba7f-a118a6746412;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 1218 672 ;
+			- _UpLeft = 0 20 ;
+			- _DownRight = 1218 692 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
 		}
