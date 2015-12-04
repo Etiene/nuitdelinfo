@@ -3,10 +3,213 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- _id = GUID b3f09109-2a4f-4a28-9774-59af93769701;
 	- _myState = 8192;
 	- _name = "Default";
-	- _modifiedTimeWeak = 12.4.2015::1:6:7;
-	- _lastID = 36;
-	- weakCGTime = 12.4.2015::1:16:15;
-	- strongCGTime = 12.4.2015::1:16:15;
+	- _modifiedTimeWeak = 12.4.2015::1:26:18;
+	- _lastID = 37;
+	- Declaratives = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IMSC 
+			- _id = GUID 485b4482-dc3d-4221-8cad-5b28216c60c4;
+			- _myState = 8192;
+			- _properties = { IPropertyContainer 
+				- Subjects = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IPropertySubject 
+						- _Name = "Format";
+						- Metaclasses = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertyMetaclass 
+								- _Name = "EnvironmentLine";
+								- Properties = { IRPYRawContainer 
+									- size = 7;
+									- value = 
+									{ IProperty 
+										- _Name = "DefaultSize";
+										- _Value = "0,0,96,437";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "Fill.FillColor";
+										- _Value = "255,255,255";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Font.Font";
+										- _Value = "Tahoma";
+										- _Type = String;
+									}
+									{ IProperty 
+										- _Name = "Font.Size";
+										- _Value = "8";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Font.Weight@Child.NameCompartment@Name";
+										- _Value = "700";
+										- _Type = Int;
+									}
+									{ IProperty 
+										- _Name = "Line.LineColor";
+										- _Value = "109,163,217";
+										- _Type = Color;
+									}
+									{ IProperty 
+										- _Name = "Line.LineWidth";
+										- _Value = "1";
+										- _Type = Int;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			- _name = "DiagrammeSequence";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _lastModifiedTime = "12.4.2015::1:26:31";
+			- _graphicChart = { CGIMscChart 
+				- vLadderMargin = 20;
+				- m_usingActivationBar = 0;
+				- _id = GUID 98c54d18-b08a-4c77-9395-59e17bc7ea22;
+				- m_type = 0;
+				- m_pModelObject = { IHandle 
+					- _m2Class = "IMSC";
+					- _id = GUID 485b4482-dc3d-4221-8cad-5b28216c60c4;
+				}
+				- m_pParent = ;
+				- m_name = { CGIText 
+					- m_str = "";
+					- m_style = "Arial" 10 0 0 0 1 ;
+					- m_color = { IColor 
+						- m_fgColor = 0;
+						- m_bgColor = 0;
+						- m_bgFlag = 0;
+					}
+					- m_position = 1 0 0  ;
+					- m_nIdent = 0;
+					- m_bImplicitSetRectPoints = 0;
+					- m_nOrientationCtrlPt = 8;
+				}
+				- m_drawBehavior = 0;
+				- m_bIsPreferencesInitialized = 0;
+				- elementList = 2;
+				{ CGIBox 
+					- _id = GUID 3f5ea6c7-8c89-48af-a87c-d044f75fcefd;
+					- m_type = 108;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "ICollaboration";
+						- _id = GUID 2db6d613-7b72-4730-a123-dda8f86f8971;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 0;
+					- m_bIsPreferencesInitialized = 0;
+					- m_polygon = 0 ;
+					- m_nNameFormat = 0;
+					- m_nIsNameFormat = 0;
+					- Compartments = { IRPYRawContainer 
+						- size = 0;
+					}
+				}
+				{ CGIMscColumnCR 
+					- _id = GUID d3fdcea0-972a-4035-b2d7-2559cc11fd13;
+					- m_type = 118;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IClassifierRole";
+						- _id = GUID da0e7227-9588-4d80-bf1e-fc9345173df6;
+					}
+					- m_pParent = GUID 3f5ea6c7-8c89-48af-a87c-d044f75fcefd;
+					- m_name = { CGIText 
+						- m_str = "ENV";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 0;
+					- m_transform = 1 0 0 0.00874 684 50 ;
+					- m_bIsPreferencesInitialized = 1;
+					- m_AdditionalLabel = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 1;
+					}
+					- m_position = 4 0 0  0 50000  96 50000  96 0  ;
+					- m_pInheritsFrom = { IHandle 
+						- _m2Class = "";
+					}
+					- m_nInheritanceMask = 0;
+					- m_SubType = 0;
+				}
+				
+				- m_access = 'Z';
+				- m_modified = 'N';
+				- m_fileVersion = "";
+				- m_nModifyDate = 0;
+				- m_nCreateDate = 0;
+				- m_creator = "";
+				- m_bScaleWithZoom = 1;
+				- m_arrowStyle = 'S';
+				- m_pRoot = GUID 3f5ea6c7-8c89-48af-a87c-d044f75fcefd;
+				- m_currentLeftTop = 0 0 ;
+				- m_currentRightBottom = 0 0 ;
+			}
+			- _defaultSubsystem = { IHandle 
+				- _m2Class = "ISubsystem";
+				- _id = GUID b3f09109-2a4f-4a28-9774-59af93769701;
+			}
+			- m_pICollaboration = { ICollaboration 
+				- _id = GUID 2db6d613-7b72-4730-a123-dda8f86f8971;
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- ClassifierRoles = { IRPYRawContainer 
+					- size = 1;
+					- value = 
+					{ IClassifierRole 
+						- _id = GUID da0e7227-9588-4d80-bf1e-fc9345173df6;
+						- _name = "ENV";
+						- _modifiedTimeWeak = 12.4.2015::1:26:31;
+						- m_eRoleType = SYSTEM_BORDER;
+						- m_pBase = { IHandle 
+							- _m2Class = "";
+						}
+						- m_instance = { IHandle 
+							- _m2Class = "";
+						}
+					}
+				}
+			}
+		}
+	}
+	- weakCGTime = 12.4.2015::1:32:44;
+	- strongCGTime = 12.4.2015::1:32:44;
 	- _defaultComposite = GUID e27134e2-4d0d-478f-8b40-66c12fa7b3c7;
 	- _eventsBaseID = 18616;
 	- Classes = { IRPYRawContainer 
@@ -16,15 +219,15 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _id = GUID e27134e2-4d0d-478f-8b40-66c12fa7b3c7;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _modifiedTimeWeak = 12.4.2015::1:16:15;
-			- weakCGTime = 12.4.2015::1:16:15;
+			- _modifiedTimeWeak = 12.4.2015::1:32:44;
+			- weakCGTime = 12.4.2015::1:32:44;
 			- strongCGTime = 1.2.1990::0:0:0;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
 				- _m2Class = "";
 			}
 			- Associations = { IRPYRawContainer 
-				- size = 7;
+				- size = 10;
 				- value = 
 				{ IPart 
 					- _id = GUID 2bec471a-4d85-402b-a14f-60faa141aea3;
@@ -124,9 +327,51 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "";
 					}
 				}
+				{ IPart 
+					- _id = GUID e32acdcc-dd50-428a-a8f0-bc320706c39c;
+					- _myState = 8192;
+					- _name = "itsGIGN";
+					- _modifiedTimeWeak = 12.4.2015::1:17:35;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 0a1c8745-81dd-4b17-9206-64cb6e1c3332;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IPart 
+					- _id = GUID 1c00db8b-5a6c-42af-893f-cff44a498d2b;
+					- _myState = 8192;
+					- _name = "itsSecours";
+					- _modifiedTimeWeak = 12.4.2015::1:17:45;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID bd887651-523f-4d45-8735-1969ac1c3a96;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IPart 
+					- _id = GUID 1145bb00-02dd-4037-9c4f-b08a0ab881f8;
+					- _myState = 8192;
+					- _name = "itsPlace";
+					- _modifiedTimeWeak = 12.4.2015::1:17:59;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID b57415ee-8799-479f-844a-49abec6ce814;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+				}
 			}
 			- ObjectLinks = { IRPYRawContainer 
-				- size = 5;
+				- size = 16;
 				- value = 
 				{ IObjectLink 
 					- _id = GUID a18984eb-e148-4356-8749-6ee3c9354b53;
@@ -258,6 +503,290 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- _m2Class = "";
 					}
 				}
+				{ IObjectLink 
+					- _id = GUID bbc53883-2930-4b19-9d87-94b912c4524f;
+					- _myState = 10240;
+					- _name = "itsCentreAppel_itsPolice";
+					- _modifiedTimeWeak = 12.4.2015::1:17:25;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 41556da8-d2d1-4a08-adc9-4dae8ad09d21;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 7aefe85f-b1b2-4b90-ada9-02f05462684d;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 078b5361-3ffe-4903-90ab-d9817b2710fc;
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IObjectLink 
+					- _id = GUID bf2d4312-978c-4031-b06d-41386b053255;
+					- _myState = 10240;
+					- _name = "itsPolice_itsCentreCommandement";
+					- _modifiedTimeWeak = 12.4.2015::1:17:29;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID aaf7af6b-356e-4436-8fa4-508c20358232;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 41556da8-d2d1-4a08-adc9-4dae8ad09d21;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 144b6588-a013-48f3-b94d-b1605c42ad69;
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IObjectLink 
+					- _id = GUID fed51f1b-b28e-4d3e-9a87-fa0774f481c5;
+					- _myState = 10240;
+					- _name = "itsCentreCommandement_itsPlace";
+					- _modifiedTimeWeak = 12.4.2015::1:18:17;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 1145bb00-02dd-4037-9c4f-b08a0ab881f8;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID aaf7af6b-356e-4436-8fa4-508c20358232;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID cf1aa727-5256-454e-a68d-3f543a533bd2;
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IObjectLink 
+					- _id = GUID 4485a415-b03c-43cf-9f27-86beac1535ec;
+					- _myState = 10240;
+					- _name = "itsCentreCommandement_itsTemoin";
+					- _modifiedTimeWeak = 12.4.2015::1:18:27;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 2c25eef9-d102-449a-beb0-90a80c403d8d;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID aaf7af6b-356e-4436-8fa4-508c20358232;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID c0b4e298-9944-42f7-880a-30338b17d1ea;
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IObjectLink 
+					- _id = GUID 37247341-7dd1-4f81-9de0-b58a7f10864c;
+					- _myState = 10240;
+					- _name = "itsCentreCommandement_itsGIGN";
+					- _modifiedTimeWeak = 12.4.2015::1:18:31;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID e32acdcc-dd50-428a-a8f0-bc320706c39c;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID aaf7af6b-356e-4436-8fa4-508c20358232;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 938a5d01-a3a1-42cf-a272-d907bc734b1c;
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IObjectLink 
+					- _id = GUID 14d1ceaf-d522-497d-a29c-035e5e16cf3a;
+					- _myState = 10240;
+					- _name = "itsGIGN_itsTerroriste";
+					- _modifiedTimeWeak = 12.4.2015::1:18:49;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 66dc1acc-738d-4785-9e7b-0f10a660a79d;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID e32acdcc-dd50-428a-a8f0-bc320706c39c;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID e0c94ce5-3b08-465d-9c32-8ae4ca9d8917;
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IObjectLink 
+					- _id = GUID bdf1c9da-3906-4afd-891d-1bab9da18398;
+					- _myState = 10240;
+					- _name = "itsGIGN_itsOtage";
+					- _modifiedTimeWeak = 12.4.2015::1:19:20;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID f9e84829-c47b-4c56-93dd-cca2511744b0;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID e32acdcc-dd50-428a-a8f0-bc320706c39c;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID fad73cb3-d610-42e7-9d80-0f154fb43d2c;
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IObjectLink 
+					- _id = GUID ecfdcf76-dd17-48d5-8866-082f1349bcad;
+					- _myState = 10240;
+					- _name = "itsGIGN_itsVictime";
+					- _modifiedTimeWeak = 12.4.2015::1:19:36;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 2bec471a-4d85-402b-a14f-60faa141aea3;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID e32acdcc-dd50-428a-a8f0-bc320706c39c;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "";
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IObjectLink 
+					- _id = GUID 81da592c-5fc4-4d9a-8ea3-8190169db6d5;
+					- _myState = 10240;
+					- _name = "itsSecours_itsVictime";
+					- _modifiedTimeWeak = 12.4.2015::1:19:55;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 2bec471a-4d85-402b-a14f-60faa141aea3;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 1c00db8b-5a6c-42af-893f-cff44a498d2b;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID e763cc66-bbfd-4465-a20d-90314a4af1c6;
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IObjectLink 
+					- _id = GUID 6e9a7961-a9cc-4088-9b4e-943e2f1b45fd;
+					- _myState = 10240;
+					- _name = "itsGIGN_itsVictime_0";
+					- _modifiedTimeWeak = 12.4.2015::1:21:2;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 2bec471a-4d85-402b-a14f-60faa141aea3;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID e32acdcc-dd50-428a-a8f0-bc320706c39c;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "";
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
+				{ IObjectLink 
+					- _id = GUID 5b25b29e-db8e-4928-98f8-86b7919cad95;
+					- _myState = 10240;
+					- _name = "itsSecours_itsCentreCommandement";
+					- _modifiedTimeWeak = 12.4.2015::1:32:44;
+					- _toLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID aaf7af6b-356e-4436-8fa4-508c20358232;
+					}
+					- _fromLink = { IHandle 
+						- _m2Class = "IPart";
+						- _id = GUID 1c00db8b-5a6c-42af-893f-cff44a498d2b;
+					}
+					- _instantiates = { IMetaLinkHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 8260170e-af66-4a94-8621-ec54f8fb5156;
+					}
+					- _end1Multiplicity = "1";
+					- _end2Multiplicity = "1";
+					- _toPort = { IHandle 
+						- _m2Class = "";
+					}
+					- _fromPort = { IHandle 
+						- _m2Class = "";
+					}
+				}
 			}
 			- _classModifier = Unspecified;
 		}
@@ -265,6 +794,36 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _id = GUID f262c4f5-ba03-427a-bdaa-a620f63e7074;
 			- _myState = 8192;
 			- _name = "CentreAppel";
+			- Dependencies = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IDependency 
+					- _id = GUID 04eb3f7c-4998-48ee-8ccf-de8c3644d446;
+					- _myState = 2048;
+					- _name = "TimeUnit";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "concurrent.sbs";
+						- _subsystem = "java::util::concurrent";
+						- _class = "";
+						- _name = "TimeUnit";
+						- _id = GUID 6942dbfc-20d9-4652-a87a-eba8dd8078e6;
+					}
+				}
+			}
 			- _modifiedTimeWeak = 12.4.2015::0:14:11;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
@@ -280,19 +839,6 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- Operations = { IRPYRawContainer 
 				- size = 4;
 				- value = 
-				{ IReception 
-					- _id = GUID 406ab581-5534-4d02-96a1-a6432a9cf6cc;
-					- _myState = 8192;
-					- _modifiedTimeWeak = 1.2.1990::0:0:0;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _event = { IHandle 
-						- _m2Class = "IEvent";
-						- _id = GUID 3b57e518-eb2b-4d7a-9637-42340091fda5;
-					}
-				}
 				{ IPrimitiveOperation 
 					- _id = GUID c02d89f0-e938-4064-8760-93cd4635abca;
 					- _myState = 8192;
@@ -353,6 +899,19 @@ try {
 		
 		e.printStackTrace();
 	}";
+					}
+				}
+				{ IReception 
+					- _id = GUID 406ab581-5534-4d02-96a1-a6432a9cf6cc;
+					- _myState = 8192;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _event = { IHandle 
+						- _m2Class = "IEvent";
+						- _id = GUID 3b57e518-eb2b-4d7a-9637-42340091fda5;
 					}
 				}
 				{ IReception 
@@ -7274,7 +7833,37 @@ unOtage.gen(new EventMort());";
 			- _id = GUID eb3bce3a-e89a-4044-89b3-13a5b2ad5bce;
 			- _myState = 8192;
 			- _name = "police";
-			- _modifiedTimeWeak = 12.4.2015::0:22:45;
+			- Dependencies = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IDependency 
+					- _id = GUID d7b10609-7891-42a2-84ac-32446f61b022;
+					- _myState = 2048;
+					- _name = "TimeUnit";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "concurrent.sbs";
+						- _subsystem = "java::util::concurrent";
+						- _class = "";
+						- _name = "TimeUnit";
+						- _id = GUID 6942dbfc-20d9-4652-a87a-eba8dd8078e6;
+					}
+				}
+			}
+			- _modifiedTimeWeak = 12.4.2015::1:31:2;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _filename = "";
@@ -7284,11 +7873,76 @@ unOtage.gen(new EventMort());";
 				- _id = GUID 05e5215c-3824-456d-ad8b-f64f5b7d8630;
 			}
 			- _lastID = 8;
-			- weakCGTime = 12.4.2015::0:22:45;
+			- weakCGTime = 12.4.2015::1:31:2;
 			- strongCGTime = 12.4.2015::0:9:55;
 			- Operations = { IRPYRawContainer 
 				- size = 6;
 				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID e77eaf41-ce9e-4f7c-8c9d-984a12cdd62e;
+					- _myState = 8192;
+					- _name = "appelleCentreCommandement";
+					- _modifiedTimeWeak = 12.4.2015::1:31:2;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "System.out.println(\"Appel vers le centre de commandement\");     
+unCentreCommandement.gen(new EventRecoitAppel());   
+try {
+		TimeUnit.SECONDS.sleep(5);  
+		unCentreCommandement.gen(new EventAnalyseSituation());
+		new EventEnAttente();
+	} catch (InterruptedException e) {
+		
+		e.printStackTrace();
+	}
+";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 5792102a-cc2f-4b87-b335-de0d1ec0bb72;
+					- _myState = 8192;
+					- _name = "finAppel";
+					- _modifiedTimeWeak = 12.4.2015::1:30:40;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "System.out.println(\"appel avec le centre Appel finit\");
+new EventAppelleCentreCommandement();";
+					}
+				}
 				{ IReception 
 					- _id = GUID f6211428-c0e7-48f6-8bdd-29016e94d0dc;
 					- _myState = 8192;
@@ -7326,71 +7980,6 @@ unOtage.gen(new EventMort());";
 					- _event = { IHandle 
 						- _m2Class = "IEvent";
 						- _id = GUID 5fc3ce85-4fa7-40d3-88a9-c051b75b11c3;
-					}
-				}
-				{ IPrimitiveOperation 
-					- _id = GUID 5792102a-cc2f-4b87-b335-de0d1ec0bb72;
-					- _myState = 8192;
-					- _name = "finAppel";
-					- _modifiedTimeWeak = 12.4.2015::0:16:52;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-					- _itsBody = { IBody 
-						- _bodyData = "System.out.println(\"appel avec le centre Appel finit\");
-new EventAppelCentreCommandement();";
-					}
-				}
-				{ IPrimitiveOperation 
-					- _id = GUID e77eaf41-ce9e-4f7c-8c9d-984a12cdd62e;
-					- _myState = 8192;
-					- _name = "appelleCentreCommandement";
-					- _modifiedTimeWeak = 12.4.2015::0:22:45;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-					- _itsBody = { IBody 
-						- _bodyData = "System.out.println(\"Appel vers le centre de commandement\");     
-unCentreCommandement.gen(new EventRecoitAppel());   
-try {
-		TimeUnit.SECONDS.sleep(5);  
-		unCentreCommandement.gen(new EventAnalyseSituation());
-		new EnAttente();
-	} catch (InterruptedException e) {
-		
-		e.printStackTrace();
-	}
-";
 					}
 				}
 				{ IReception 
@@ -8428,7 +9017,37 @@ try {
 			- _id = GUID 1143ad39-9125-44e3-a5b2-2ff0ef172641;
 			- _myState = 8192;
 			- _name = "centreCommandement";
-			- _modifiedTimeWeak = 12.4.2015::1:11:42;
+			- Dependencies = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IDependency 
+					- _id = GUID 6280e057-5b1e-4131-93a2-ce6a9833bbdc;
+					- _myState = 2048;
+					- _name = "TimeUnit";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "concurrent.sbs";
+						- _subsystem = "java::util::concurrent";
+						- _class = "";
+						- _name = "TimeUnit";
+						- _id = GUID 6942dbfc-20d9-4652-a87a-eba8dd8078e6;
+					}
+				}
+			}
+			- _modifiedTimeWeak = 12.4.2015::1:32:35;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _filename = "";
@@ -8438,61 +9057,11 @@ try {
 				- _id = GUID 05e5215c-3824-456d-ad8b-f64f5b7d8630;
 			}
 			- _lastID = 13;
-			- weakCGTime = 12.4.2015::1:11:42;
+			- weakCGTime = 12.4.2015::1:32:35;
 			- strongCGTime = 12.4.2015::0:17:24;
 			- Operations = { IRPYRawContainer 
 				- size = 14;
 				- value = 
-				{ IReception 
-					- _id = GUID 6d323f03-a729-47a9-84f0-d4539bb7bcdf;
-					- _myState = 8192;
-					- _modifiedTimeWeak = 1.2.1990::0:0:0;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _event = { IHandle 
-						- _m2Class = "IEvent";
-						- _id = GUID 3b57e518-eb2b-4d7a-9637-42340091fda5;
-					}
-				}
-				{ IPrimitiveOperation 
-					- _id = GUID 02220734-124d-467f-b58d-05667e573758;
-					- _myState = 8192;
-					- _name = "enAppelle";
-					- _modifiedTimeWeak = 12.4.2015::0:18:44;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-				}
-				{ IReception 
-					- _id = GUID 0e6b3737-270a-4547-b94d-2d6bf8440b7a;
-					- _myState = 8192;
-					- _modifiedTimeWeak = 1.2.1990::0:0:0;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _event = { IHandle 
-						- _m2Class = "IEvent";
-						- _id = GUID 8ad3202a-6f07-4dc0-a3d5-403ae676a285;
-					}
-				}
 				{ IPrimitiveOperation 
 					- _id = GUID c527ff15-aac3-4679-8dd7-a047f3948273;
 					- _myState = 8192;
@@ -8520,17 +9089,32 @@ try {
 						- _bodyData = "System.out.println(\"Analyse la situation\");";
 					}
 				}
-				{ IReception 
-					- _id = GUID 1b0d84a1-3c35-424d-83ff-ed21403186e8;
+				{ IPrimitiveOperation 
+					- _id = GUID 5bd20218-5f5f-43eb-8551-62deb02b0fca;
 					- _myState = 8192;
-					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _name = "assautEchec";
+					- _modifiedTimeWeak = 12.4.2015::0:40:36;
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
 						- size = 0;
 					}
-					- _event = { IHandle 
-						- _m2Class = "IEvent";
-						- _id = GUID a48148f1-4c22-4411-8465-dc9fbfe26d5b;
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "System.out.println(\"Echec de Assaut\");
+unGIGN.gen (new EventGIGNMort());";
 					}
 				}
 				{ IPrimitiveOperation 
@@ -8571,6 +9155,33 @@ try {
 					}
 				}
 				{ IPrimitiveOperation 
+					- _id = GUID 02220734-124d-467f-b58d-05667e573758;
+					- _myState = 8192;
+					- _name = "enAppelle";
+					- _modifiedTimeWeak = 12.4.2015::0:18:44;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "";
+					}
+				}
+				{ IPrimitiveOperation 
 					- _id = GUID 05eaaa9b-a68f-4a47-b6ad-5a06c8dfb2d2;
 					- _myState = 8192;
 					- _name = "lanceAssaut";
@@ -8595,6 +9206,73 @@ try {
 					- _constant = 0;
 					- _itsBody = { IBody 
 						- _bodyData = "System.out.println(\"Debut Assaut\");";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 0896876e-4971-41b1-b3dc-bd6bd1234978;
+					- _myState = 8192;
+					- _name = "reussi";
+					- _modifiedTimeWeak = 12.4.2015::1:11:42;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "unPlace.gen(new EventSecurisee());
+unSecours.gen(new EventEnvoye());";
+					}
+				}
+				{ IReception 
+					- _id = GUID 6d323f03-a729-47a9-84f0-d4539bb7bcdf;
+					- _myState = 8192;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _event = { IHandle 
+						- _m2Class = "IEvent";
+						- _id = GUID 3b57e518-eb2b-4d7a-9637-42340091fda5;
+					}
+				}
+				{ IReception 
+					- _id = GUID 0e6b3737-270a-4547-b94d-2d6bf8440b7a;
+					- _myState = 8192;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _event = { IHandle 
+						- _m2Class = "IEvent";
+						- _id = GUID 8ad3202a-6f07-4dc0-a3d5-403ae676a285;
+					}
+				}
+				{ IReception 
+					- _id = GUID 1b0d84a1-3c35-424d-83ff-ed21403186e8;
+					- _myState = 8192;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _event = { IHandle 
+						- _m2Class = "IEvent";
+						- _id = GUID a48148f1-4c22-4411-8465-dc9fbfe26d5b;
 					}
 				}
 				{ IReception 
@@ -8636,34 +9314,6 @@ try {
 						- _id = GUID 40dece47-d60b-4056-bb1a-195dc6fc7e82;
 					}
 				}
-				{ IPrimitiveOperation 
-					- _id = GUID 5bd20218-5f5f-43eb-8551-62deb02b0fca;
-					- _myState = 8192;
-					- _name = "assautEchec";
-					- _modifiedTimeWeak = 12.4.2015::0:40:36;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-					- _itsBody = { IBody 
-						- _bodyData = "System.out.println(\"Echec de Assaut\");
-unGIGN.gen (new EventGIGN";
-					}
-				}
 				{ IReception 
 					- _id = GUID 5576cd9d-c295-4d02-a22a-dc4d8bced8fd;
 					- _myState = 8192;
@@ -8688,34 +9338,6 @@ unGIGN.gen (new EventGIGN";
 					- _event = { IHandle 
 						- _m2Class = "IEvent";
 						- _id = GUID 6edb1d28-19d6-45a8-920d-61346f667d04;
-					}
-				}
-				{ IPrimitiveOperation 
-					- _id = GUID 0896876e-4971-41b1-b3dc-bd6bd1234978;
-					- _myState = 8192;
-					- _name = "reussi";
-					- _modifiedTimeWeak = 12.4.2015::1:11:42;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-					- _itsBody = { IBody 
-						- _bodyData = "unPlace.gen(new EventSecurisee());
-unSecours.gen(new EventEnvoye());";
 					}
 				}
 			}
@@ -10118,7 +10740,7 @@ unSecours.gen(new EventEnvoye());";
 				- _id = GUID df5dc2d5-8a32-4f99-8881-866d291f264f;
 			}
 			- Associations = { IRPYRawContainer 
-				- size = 8;
+				- size = 9;
 				- value = 
 				{ IAssociationEnd 
 					- _id = GUID 1bc810c4-66e5-4ce7-8708-38d5df4c7eee;
@@ -10264,6 +10886,24 @@ unSecours.gen(new EventEnvoye());";
 					- _linkType = Assoc;
 					- _navigability = Navigable;
 				}
+				{ IAssociationEnd 
+					- _id = GUID c2b8c1ce-b954-4d5d-9fb2-1a4f16b10e57;
+					- _myState = 8192;
+					- _name = "unSecours";
+					- _modifiedTimeWeak = 12.4.2015::1:32:35;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID bd887651-523f-4d45-8735-1969ac1c3a96;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 8260170e-af66-4a94-8621-ec54f8fb5156;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
 			}
 			- _classModifier = Unspecified;
 		}
@@ -10271,7 +10911,7 @@ unSecours.gen(new EventEnvoye());";
 			- _id = GUID 0a1c8745-81dd-4b17-9206-64cb6e1c3332;
 			- _myState = 8192;
 			- _name = "GIGN";
-			- _modifiedTimeWeak = 12.4.2015::1:2:5;
+			- _modifiedTimeWeak = 12.4.2015::1:22:46;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _filename = "";
@@ -10281,7 +10921,7 @@ unSecours.gen(new EventEnvoye());";
 				- _id = GUID 05e5215c-3824-456d-ad8b-f64f5b7d8630;
 			}
 			- _lastID = 12;
-			- weakCGTime = 12.4.2015::1:2:5;
+			- weakCGTime = 12.4.2015::1:22:46;
 			- strongCGTime = 12.4.2015::0:34:10;
 			- Operations = { IRPYRawContainer 
 				- size = 9;
@@ -10396,7 +11036,7 @@ unSecours.gen(new EventEnvoye());";
 					- _id = GUID ee4194a4-7790-4a62-a0c3-02caff52f820;
 					- _myState = 8192;
 					- _name = "assautReussi";
-					- _modifiedTimeWeak = 12.4.2015::1:2:5;
+					- _modifiedTimeWeak = 12.4.2015::1:22:46;
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
 						- size = 0;
@@ -10418,7 +11058,8 @@ unSecours.gen(new EventEnvoye());";
 					- _itsBody = { IBody 
 						- _bodyData = "System.out.println(\"Assaut du GIGN reussi\"); 
 unTerroriste.gen (new EventTerroristeNeutralise());
-unCentreCommandement.gen( new EventReussi());";
+unCentreCommandement.gen( new EventReussi());  
+unOtage.gen(new EventLibre());";
 					}
 				}
 				{ IPrimitiveOperation 
@@ -11760,7 +12401,37 @@ unTerroriste.gen(new EventSeFaitExploser());";
 			- _id = GUID bd887651-523f-4d45-8735-1969ac1c3a96;
 			- _myState = 8192;
 			- _name = "Secours";
-			- _modifiedTimeWeak = 12.4.2015::1:13:32;
+			- Dependencies = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IDependency 
+					- _id = GUID b04f3bf4-3e3e-452c-9e78-9d4fd863131a;
+					- _myState = 2048;
+					- _name = "TimeUnit";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "Usage";
+							- _id = GUID 42aa4325-6112-4e88-87ce-66008878f1db;
+						}
+					}
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IClass";
+						- _filename = "concurrent.sbs";
+						- _subsystem = "java::util::concurrent";
+						- _class = "";
+						- _name = "TimeUnit";
+						- _id = GUID 6942dbfc-20d9-4652-a87a-eba8dd8078e6;
+					}
+				}
+			}
+			- _modifiedTimeWeak = 12.4.2015::1:32:35;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _filename = "";
@@ -11769,12 +12440,103 @@ unTerroriste.gen(new EventSeFaitExploser());";
 				- _name = "DiagrammeClasse";
 				- _id = GUID 05e5215c-3824-456d-ad8b-f64f5b7d8630;
 			}
-			- _lastID = 12;
-			- weakCGTime = 12.4.2015::1:13:32;
+			- _lastID = 13;
+			- weakCGTime = 12.4.2015::1:32:35;
 			- strongCGTime = 12.4.2015::0:55:56;
 			- Operations = { IRPYRawContainer 
-				- size = 7;
+				- size = 8;
 				- value = 
+				{ IPrimitiveOperation 
+					- _id = GUID 2f5ea069-25fd-40b3-a140-5002e38e3ab0;
+					- _myState = 8192;
+					- _name = "envoye";
+					- _modifiedTimeWeak = 12.4.2015::1:12:21;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "System.out.println(\"Secours envoye\");  
+new EventSoigne();";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b55c0172-6de6-440c-a956-7359ea29d9d1;
+					- _myState = 8192;
+					- _name = "etatAlerte";
+					- _modifiedTimeWeak = 12.4.2015::0:58:28;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "System.out.println(\"Secours en etat alerte\");";
+					}
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 364f5c25-980f-49f2-9030-78c3b8a5eaaa;
+					- _myState = 8192;
+					- _name = "soigne";
+					- _modifiedTimeWeak = 12.4.2015::1:13:32;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesJava.sbs";
+						- _subsystem = "PredefinedTypesJava";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+					- _itsBody = { IBody 
+						- _bodyData = "unVictime.gen(new EventVictimeSecouru());   
+  try {
+		TimeUnit.SECONDS.sleep(5); 
+		unVictime.gen(new EventVictimeSurvie());
+		new EventFinMission();
+	} catch (InterruptedException e) {
+		
+		e.printStackTrace();
+	}
+";
+					}
+				}
 				{ IReception 
 					- _id = GUID 2b2dab6b-742f-4c83-b2c0-e43aea46a098;
 					- _myState = 8192;
@@ -11828,10 +12590,10 @@ unTerroriste.gen(new EventSeFaitExploser());";
 					}
 				}
 				{ IPrimitiveOperation 
-					- _id = GUID b55c0172-6de6-440c-a956-7359ea29d9d1;
+					- _id = GUID 32c04805-ced2-48e0-8b95-24a009e89962;
 					- _myState = 8192;
-					- _name = "etatAlerte";
-					- _modifiedTimeWeak = 12.4.2015::0:58:28;
+					- _name = "finMission";
+					- _modifiedTimeWeak = 12.4.2015::1:29:13;
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
 						- size = 0;
@@ -11851,71 +12613,7 @@ unTerroriste.gen(new EventSeFaitExploser());";
 					- _static = 0;
 					- _constant = 0;
 					- _itsBody = { IBody 
-						- _bodyData = "System.out.println(\"Secours en etat alerte\");";
-					}
-				}
-				{ IPrimitiveOperation 
-					- _id = GUID 2f5ea069-25fd-40b3-a140-5002e38e3ab0;
-					- _myState = 8192;
-					- _name = "envoye";
-					- _modifiedTimeWeak = 12.4.2015::1:12:21;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-					- _itsBody = { IBody 
-						- _bodyData = "System.out.println(\"Secours envoye\");  
-new EventSoigne();";
-					}
-				}
-				{ IPrimitiveOperation 
-					- _id = GUID 364f5c25-980f-49f2-9030-78c3b8a5eaaa;
-					- _myState = 8192;
-					- _name = "soigne";
-					- _modifiedTimeWeak = 12.4.2015::1:13:32;
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesJava.sbs";
-						- _subsystem = "PredefinedTypesJava";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID 38d26ae8-de64-4b2e-8b3e-d6cbe8e0a76d;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-					- _itsBody = { IBody 
-						- _bodyData = "unVictime.gen(new EventVictimeSecouru());   
-  try {
-		TimeUnit.SECONDS.sleep(5); 
-		unVictime.gen(new EventVictimeSurvie());
-		new EventFinMission();
-	} catch (InterruptedException e) {
-		
-		e.printStackTrace();
-	}
-";
+						- _bodyData = "System.out.println(\"fin des secours\");";
 					}
 				}
 			}
@@ -12941,7 +13639,7 @@ new EventSoigne();";
 				- _id = GUID f785d3be-954c-4391-8df2-50451b5cfa6e;
 			}
 			- Associations = { IRPYRawContainer 
-				- size = 2;
+				- size = 3;
 				- value = 
 				{ IAssociationEnd 
 					- _id = GUID d139edd3-55e7-4267-8e48-13abc0b7f3d9;
@@ -12973,6 +13671,24 @@ new EventSoigne();";
 					- _inverse = { IHandle 
 						- _m2Class = "IAssociationEnd";
 						- _id = GUID b319f24a-7204-4ddc-be54-2636cae75609;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 8260170e-af66-4a94-8621-ec54f8fb5156;
+					- _myState = 8192;
+					- _name = "unCentreCommandement";
+					- _modifiedTimeWeak = 12.4.2015::1:32:35;
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 1143ad39-9125-44e3-a5b2-2ff0ef172641;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID c2b8c1ce-b954-4d5d-9fb2-1a4f16b10e57;
 					}
 					- _linkName = "";
 					- _linkType = Assoc;

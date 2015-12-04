@@ -1,0 +1,75 @@
+I-Logix-RPY-Archive version 8.10.0 Java 6930133
+{ ISubsystem 
+	- _id = GUID e21f3336-b7f1-486b-9ad8-fac43c66c6db;
+	- _myState = 8192;
+	- _properties = { IPropertyContainer 
+		- Subjects = { IRPYRawContainer 
+			- size = 1;
+			- value = 
+			{ IPropertySubject 
+				- _Name = "CG";
+				- Metaclasses = { IRPYRawContainer 
+					- size = 2;
+					- value = 
+					{ IPropertyMetaclass 
+						- _Name = "Class";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "CreateImplicitDependencies";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+					{ IPropertyMetaclass 
+						- _Name = "Type";
+						- Properties = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IProperty 
+								- _Name = "GenerateDeclarationDependency";
+								- _Value = "False";
+								- _Type = Bool;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	- _name = "java";
+	- _modifiedTimeWeak = 1.2.1990::0:0:0;
+	- Declaratives = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ ISubsystem 
+			- fileName = "util";
+			- _id = GUID f9c6aa7d-446f-4c66-aa3c-e3bd3a9d9c83;
+		}
+	}
+	- weakCGTime = 1.2.1990::0:0:0;
+	- strongCGTime = 1.2.1990::0:0:0;
+	- _defaultComposite = GUID 282bd911-e9ef-407a-9f19-0b5a6bad8525;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IClass 
+			- _id = GUID 282bd911-e9ef-407a-9f19-0b5a6bad8525;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- weakCGTime = 1.2.1990::0:0:0;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.1.1970::1:0:0;
+}
+

@@ -1,10 +1,13 @@
 I-Logix-RPY-Archive version 8.10.0 * 6930133
 
 - filesTable = { IRPYRawContainer 
-	- size = 3;
+	- size = 6;
 	- value = "Attentat.rpy" ""
 	"Attentat_rpy\\Default.sbs" "Default"
 	"Attentat_rpy\\DefaultComponent.cmp" "DefaultComponent"
+	"Attentat_rpy\\concurrent.sbs" "java::util::concurrent"
+	"Attentat_rpy\\java.sbs" "java"
+	"Attentat_rpy\\util.sbs" "java::util"
 	
 }
 
