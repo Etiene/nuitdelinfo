@@ -34,14 +34,40 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _id = GUID 3f8ec941-fcca-4322-bade-953a74edacb5;
 			- _myState = 8192;
 			- _name = "DefaultConfig";
-			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _modifiedTimeWeak = 12.4.2015::6:6:58;
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 49723bb7-bce8-4295-bbea-c5a9e63c2f7e;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "C:/ProgramData/IBM/Rational/Rhapsody/8.1.1/AppCitoyente/DefaultComponent/DefaultConfig/DefaultComponent.bat";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID b33dd227-06f2-4bbb-81f9-2fbccee27480;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "C:/ProgramData/IBM/Rational/Rhapsody/8.1.1/AppCitoyente/DefaultComponent/DefaultConfig/MainDefaultComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
 			- _scopeType = Explicit;
 			- _libraries = "";
 			- _additionalSources = "";
 			- _standardHeaders = "";
 			- _includePath = "";
 			- _targetMain = "";
-			- _instrumentation = None;
+			- _instrumentation = Animation;
 			- _timeModel = RealTime;
 			- m_generateActors = 1;
 			- _statechartImplementation = Flat;
@@ -66,8 +92,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 					- size = 0;
 				}
 			}
-			- weakCGTime = 1.2.1990::0:0:0;
-			- strongCGTime = 1.2.1990::0:0:0;
+			- weakCGTime = 12.4.2015::6:6:58;
+			- strongCGTime = 12.4.2015::6:6:58;
 			- AnimScopeElements = { IRPYRawContainer 
 				- size = 0;
 			}
