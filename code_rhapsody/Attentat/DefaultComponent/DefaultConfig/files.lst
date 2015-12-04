@@ -1,3 +1,4 @@
+Default/EventFinAppelTemoin.java
 Default/EventVictimeSurvie.java
 Default/EventVictimeSecouru.java
 Default/EventEnCoursAssaut.java
@@ -7,6 +8,7 @@ Default/Victime.java
 Default/EventPriseOtage.java
 Default/EventFinCooperation.java
 Default/EventDemandeInformation.java
+Default/EventDebutAppelCentreAppel.java
 Default/EventGIGNMort.java
 Default/EventAppelPoliceEnCours.java
 Default/EventReussi.java
@@ -16,8 +18,11 @@ Default/Terroriste.java
 Default/EventEtateAlerte.java
 Default/EventFinCopperation.java
 Default/GIGN.java
+Default/EventFinAppelPolice.java
+Default/EventDebutAppelPolice.java
 Default/EventEtatAlerte.java
 Default/EventCooperation.java
+Default/EventEnAttenteInstruction.java
 Default/EventGIGNVivant.java
 Default/EventEnAttente.java
 Default/EventLibre.java
@@ -32,16 +37,21 @@ Default/EventNonSecurisee.java
 Default/EventMort.java
 Default/EventTerroristeNeutralise.java
 Default/Temoin.java
+Default/EventDebutAppelCentreCommandement.java
 Default/EventAnalyseSituation.java
 Default/EventFinAppel.java
 Default/EventSoigne.java
 Default/EventVictimeMort.java
 Default/EventAssautEchec.java
 Default/otage.java
+Default/EventFinAppelCentreAppel.java
 Default/EventEchec.java
 Default/centreCommandement.java
 MainDefaultComponent.java
+Default/EventFinAppelCentreCommandement.java
+Default/EventAppelTemoin.java
 Default/EventSecurisee.java
 Default/CentreAppel.java
+Default/EventDebutAppelTemoin.java
 Default/Secours.java
 Default/Place.java

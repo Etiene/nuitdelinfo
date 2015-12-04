@@ -1,3 +1,8 @@
 [Op Calls]
 [Events]
+GIGN->GEN(EventAssautReussi())`Default::GIGN
+Terroriste->GEN(EventTirSurVictime())`Default::Terroriste
+GIGN->GEN(EventEnCoursAssaut())`Default::GIGN
+GIGN->GEN(EventAssautEchec())`Default::GIGN
+itsTemoin->GEN(EventAppelleCentreAppel())`Temoin
 [Breakpoints]

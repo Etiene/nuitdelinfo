@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- _id = GUID 032eba84-68f7-4ebc-b05f-480ff49609f2;
 	- _myState = 139264;
 	- _name = "DefaultComponent";
-	- _modifiedTimeWeak = 12.3.2015::22:48:43;
+	- _modifiedTimeWeak = 12.4.2015::1:39:16;
 	- m_buildType = Executable;
 	- m_libraries = "";
 	- m_additionalSources = "";
@@ -34,7 +34,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _id = GUID 5becf751-72cd-40e7-b612-a2aeb84374bd;
 			- _myState = 8192;
 			- _name = "DefaultConfig";
-			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- _modifiedTimeWeak = 12.4.2015::1:39:16;
 			- HyperLinks = { IRPYRawContainer 
 				- size = 2;
 				- value = 
@@ -67,7 +67,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _standardHeaders = "";
 			- _includePath = "";
 			- _targetMain = "";
-			- _instrumentation = None;
+			- _instrumentation = Animation;
 			- _timeModel = RealTime;
 			- m_generateActors = 1;
 			- _statechartImplementation = Flat;
@@ -92,8 +92,8 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 					- size = 0;
 				}
 			}
-			- weakCGTime = 1.2.1990::0:0:0;
-			- strongCGTime = 1.2.1990::0:0:0;
+			- weakCGTime = 12.4.2015::1:39:16;
+			- strongCGTime = 12.4.2015::1:39:16;
 			- AnimScopeElements = { IRPYRawContainer 
 				- size = 0;
 			}
@@ -102,7 +102,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 		}
 	}
 	- HandlesInMe = { IRPYRawContainer 
-		- size = 2;
+		- size = 5;
 		- value = 
 		{ IHandle 
 			- _m2Class = "ISubsystem";
@@ -111,6 +111,30 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			- _class = "";
 			- _name = "Default";
 			- _id = GUID b3f09109-2a4f-4a28-9774-59af93769701;
+		}
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "java.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "java";
+			- _id = GUID e21f3336-b7f1-486b-9ad8-fac43c66c6db;
+		}
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "util.sbs";
+			- _subsystem = "java";
+			- _class = "";
+			- _name = "util";
+			- _id = GUID f9c6aa7d-446f-4c66-aa3c-e3bd3a9d9c83;
+		}
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "concurrent.sbs";
+			- _subsystem = "java::util";
+			- _class = "";
+			- _name = "concurrent";
+			- _id = GUID 7d56ab17-3126-470a-bbbb-66a79ce5e920;
 		}
 		{ IHandle 
 			- _m2Class = "IProfile";
@@ -127,7 +151,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- SelectedVariants = { IRPYRawContainer 
 		- size = 0;
 	}
-	- weakCGTime = 12.3.2015::22:48:43;
+	- weakCGTime = 12.4.2015::1:39:16;
 	- strongCGTime = 1.2.1990::0:0:0;
 }
 

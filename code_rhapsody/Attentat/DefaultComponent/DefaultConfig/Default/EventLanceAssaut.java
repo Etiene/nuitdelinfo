@@ -11,7 +11,11 @@
 package Default;
 
 //## auto_generated
+import com.ibm.rational.rhapsody.animation.*;
+//## auto_generated
 import com.ibm.rational.rhapsody.oxf.RiJEvent;
+//## auto_generated
+import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
 // Default/EventLanceAssaut.java                                                                  
@@ -21,7 +25,7 @@ import com.ibm.rational.rhapsody.oxf.RiJEvent;
 
 
 //## event EventLanceAssaut() 
-public class EventLanceAssaut extends RiJEvent {
+public class EventLanceAssaut extends RiJEvent implements AnimatedEvent {
     
     public static final int EventLanceAssaut_Default_id = 18630;		//## ignore 
     
@@ -35,6 +39,30 @@ public class EventLanceAssaut extends RiJEvent {
     public boolean isTypeOf(long id) {
         return (EventLanceAssaut_Default_id==id);
     }
+    
+    //#[ ignore
+    /** the animated event proxy */
+    public static AnimEventClass animClass = new AnimEventClass("Default.EventLanceAssaut");
+    /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
+    public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
+         Object obj = null;
+         try {
+             obj = f.get(userInstance);
+         } catch(Exception e) {
+              java.lang.System.err.println("Exception: getting Field value: " + e);
+              e.printStackTrace();
+         }
+         return obj;
+    }
+    /**  see com.ibm.rational.rhapsody.animation.AnimatedEvent interface */
+    public void addAttributes(AnimAttributes msg) {      
+    }
+    public String toString() {
+          String s="EventLanceAssaut(";      
+          s += ")";
+          return s;
+    }
+    //#]
     
 }
 /*********************************************************************

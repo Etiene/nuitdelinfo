@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 	- _id = GUID 35d45cd1-4e10-4818-89b7-69c2ac413f9d;
 	- _myState = 8192;
 	- _name = "Attentat";
-	- _modifiedTimeWeak = 12.4.2015::1:16:23;
+	- _modifiedTimeWeak = 12.4.2015::3:12:23;
 	- _lastID = 1;
 	- _UserColors = { IRPYRawContainer 
 		- size = 16;
@@ -4109,7 +4109,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 			}
 			- _name = "DiagrammeInstance";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "12.4.2015::1:32:46";
+			- _lastModifiedTime = "12.4.2015::1:42:14";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID b9a418eb-ead2-4117-ac12-8da30438e6aa;
 				- m_type = 0;
@@ -4133,7 +4133,7 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				}
 				- m_drawBehavior = 0;
 				- m_bIsPreferencesInitialized = 0;
-				- elementList = 25;
+				- elementList = 26;
 				{ CGIClass 
 					- _id = GUID 61e523a1-467f-45e3-a195-0000a6e93dec;
 					- m_type = 78;
@@ -7294,6 +7294,136 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 						- m_bImplicitSetRectPoints = 0;
 					}
 				}
+				{ CGIObjectLink 
+					- _id = GUID 008cabc6-ef4a-4164-a6f8-318949fe0e36;
+					- _properties = { IPropertyContainer 
+						- Subjects = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IPropertySubject 
+								- _Name = "General";
+								- Metaclasses = { IRPYRawContainer 
+									- size = 1;
+									- value = 
+									{ IPropertyMetaclass 
+										- _Name = "Graphics";
+										- Properties = { IRPYRawContainer 
+											- size = 1;
+											- value = 
+											{ IProperty 
+												- _Name = "ShowLabels";
+												- _Value = "False";
+												- _Type = Bool;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					- m_type = 80;
+					- m_pModelObject = { IHandle 
+						- _m2Class = "IObjectLink";
+						- _filename = "Default.sbs";
+						- _subsystem = "Default";
+						- _class = "TopLevel";
+						- _name = "itsTerroriste_itsOtage";
+						- _id = GUID e0647bbc-0ddc-46c7-bb26-8b85476caa8e;
+					}
+					- m_pParent = ;
+					- m_name = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_drawBehavior = 4096;
+					- m_bIsPreferencesInitialized = 1;
+					- m_pSource = GUID a429ec40-c5ba-4155-a21d-b20cc3d69c8a;
+					- m_sourceType = 'F';
+					- m_pTarget = GUID e5c047dd-3a02-4322-a332-3a13ec5fdc81;
+					- m_targetType = 'T';
+					- m_direction = ' ';
+					- m_rpn = { CGIText 
+						- m_str = "itsTerroriste_itsOtage";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 0;
+						- m_bImplicitSetRectPoints = 0;
+						- m_nOrientationCtrlPt = 8;
+					}
+					- m_arrow = 3 121 190  163 190  163 114  ;
+					- m_anglePoint1 = 0 0 ;
+					- m_anglePoint2 = 0 0 ;
+					- m_line_style = 2;
+					- m_SourcePort = 786 401 ;
+					- m_TargetPort = 191 963 ;
+					- m_bShowSourceMultiplicity = 0;
+					- m_bShowSourceRole = 0;
+					- m_bShowTargetMultiplicity = 0;
+					- m_bShowTargetRole = 0;
+					- m_bShowLinkName = 0;
+					- m_sourceRole = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 2;
+						- m_bImplicitSetRectPoints = 0;
+					}
+					- m_targetRole = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 3;
+						- m_bImplicitSetRectPoints = 0;
+					}
+					- m_sourceMultiplicity = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 4;
+						- m_bImplicitSetRectPoints = 0;
+					}
+					- m_targetMultiplicity = { CGIText 
+						- m_str = "";
+						- m_style = "Arial" 10 0 0 0 1 ;
+						- m_color = { IColor 
+							- m_fgColor = 0;
+							- m_bgColor = 0;
+							- m_bgFlag = 0;
+						}
+						- m_position = 1 0 0  ;
+						- m_nIdent = 5;
+						- m_bImplicitSetRectPoints = 0;
+					}
+				}
 				
 				- m_access = 'Z';
 				- m_modified = 'N';
@@ -7316,6 +7446,9 @@ I-Logix-RPY-Archive version 8.10.0 Java 6930133
 				- _id = GUID b3f09109-2a4f-4a28-9774-59af93769701;
 			}
 		}
+	}
+	- MSCS = { IRPYRawContainer 
+		- size = 0;
 	}
 	- Components = { IRPYRawContainer 
 		- size = 1;

@@ -13,7 +13,11 @@ package Default;
 //## auto_generated
 import com.ibm.rational.rhapsody.oxf.*;
 //## auto_generated
+import com.ibm.rational.rhapsody.animation.*;
+//## auto_generated
 import com.ibm.rational.rhapsody.oxf.states.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
 // Default/GIGN.java                                                                  
@@ -29,7 +33,14 @@ import com.ibm.rational.rhapsody.oxf.states.*;
 [[ * @since $Since]]
 */
 //## actor GIGN 
-public class GIGN implements RiJStateConcept {
+public class GIGN implements RiJStateConcept, Animated {
+    
+    //#[ ignore
+    // Instrumentation attributes (Animation)
+    private Animate animate;
+    
+    public static AnimClass animClassGIGN = new AnimClass("Default.GIGN",false);
+    //#]
     
     public Reactive reactive;		//## ignore 
     
@@ -104,47 +115,108 @@ public class GIGN implements RiJStateConcept {
     
     //## auto_generated 
     public  GIGN(RiJThread p_thread) {
+        try {
+            animInstance().notifyConstructorEntered(animClassGIGN.getUserClass(),
+               new ArgData[] {
+               });
+        
         reactive = new Reactive(p_thread);
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation assautEchec() 
     public void assautEchec() {
+        try {
+            animInstance().notifyMethodEntered("assautEchec",
+               new ArgData[] {
+               });
+        
         //#[ operation assautEchec() 
         System.out.println("echec de l'assaut");
-        new EventGIGNMort();  
-        unTerroriste.gen(new EventSeFaitExploser());
+        this.gen(new EventGIGNMort());  
+        unTerroriste.gen(new EventSeFaitExploser());         
+        unCentreCommandement.gen(new EventEchec());
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation assautReussi() 
     public void assautReussi() {
+        try {
+            animInstance().notifyMethodEntered("assautReussi",
+               new ArgData[] {
+               });
+        
         //#[ operation assautReussi() 
         System.out.println("Assaut du GIGN reussi"); 
         unTerroriste.gen (new EventTerroristeNeutralise());
         unCentreCommandement.gen( new EventReussi());  
         unOtage.gen(new EventLibre());
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation enCoursAssaut() 
     public void enCoursAssaut() {
+        try {
+            animInstance().notifyMethodEntered("enCoursAssaut",
+               new ArgData[] {
+               });
+        
         //#[ operation enCoursAssaut() 
         System.out.println("Le GIGN est en cours assaut");
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation etatAlerte() 
     public void etatAlerte() {
+        try {
+            animInstance().notifyMethodEntered("etatAlerte",
+               new ArgData[] {
+               });
+        
         //#[ operation etatAlerte() 
         System.out.println("GIGN en etat alerte");
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation gignMort() 
     public void gignMort() {
+        try {
+            animInstance().notifyMethodEntered("gignMort",
+               new ArgData[] {
+               });
+        
         //#[ operation gignMort() 
         System.out.println("le gign est mort");
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## auto_generated 
@@ -155,6 +227,14 @@ public class GIGN implements RiJStateConcept {
     //## auto_generated 
     public void __setUnCentreCommandement(centreCommandement p_centreCommandement) {
         unCentreCommandement = p_centreCommandement;
+        if(p_centreCommandement != null)
+            {
+                animInstance().notifyRelationAdded("unCentreCommandement", p_centreCommandement);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unCentreCommandement");
+            }
     }
     
     //## auto_generated 
@@ -177,6 +257,7 @@ public class GIGN implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnCentreCommandement() {
+        animInstance().notifyRelationCleared("unCentreCommandement");
         unCentreCommandement = null;
     }
     
@@ -188,6 +269,14 @@ public class GIGN implements RiJStateConcept {
     //## auto_generated 
     public void __setUnOtage(otage p_otage) {
         unOtage = p_otage;
+        if(p_otage != null)
+            {
+                animInstance().notifyRelationAdded("unOtage", p_otage);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unOtage");
+            }
     }
     
     //## auto_generated 
@@ -210,6 +299,7 @@ public class GIGN implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnOtage() {
+        animInstance().notifyRelationCleared("unOtage");
         unOtage = null;
     }
     
@@ -221,6 +311,14 @@ public class GIGN implements RiJStateConcept {
     //## auto_generated 
     public void __setUnPlace(Place p_Place) {
         unPlace = p_Place;
+        if(p_Place != null)
+            {
+                animInstance().notifyRelationAdded("unPlace", p_Place);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unPlace");
+            }
     }
     
     //## auto_generated 
@@ -243,6 +341,7 @@ public class GIGN implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnPlace() {
+        animInstance().notifyRelationCleared("unPlace");
         unPlace = null;
     }
     
@@ -254,6 +353,14 @@ public class GIGN implements RiJStateConcept {
     //## auto_generated 
     public void __setUnTerroriste(Terroriste p_Terroriste) {
         unTerroriste = p_Terroriste;
+        if(p_Terroriste != null)
+            {
+                animInstance().notifyRelationAdded("unTerroriste", p_Terroriste);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unTerroriste");
+            }
     }
     
     //## auto_generated 
@@ -276,6 +383,7 @@ public class GIGN implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnTerroriste() {
+        animInstance().notifyRelationCleared("unTerroriste");
         unTerroriste = null;
     }
     
@@ -287,7 +395,7 @@ public class GIGN implements RiJStateConcept {
     }
     
     //## ignore 
-    public class Reactive extends RiJStateReactive {
+    public class Reactive extends RiJStateReactive implements AnimatedReactive {
         
         // Default constructor 
         public Reactive() {
@@ -314,6 +422,45 @@ public class GIGN implements RiJStateConcept {
         //## statechart_method 
         public boolean isCompleted(int state) {
             return true;
+        }
+        
+        //## statechart_method 
+        public void rootState_add(AnimStates animStates) {
+            animStates.add("ROOT");
+            switch (rootState_subState) {
+                case EtatNormal:
+                {
+                    EtatNormal_add(animStates);
+                }
+                break;
+                case EtatAlerte:
+                {
+                    EtatAlerte_add(animStates);
+                }
+                break;
+                case EnCoursAssaut:
+                {
+                    EnCoursAssaut_add(animStates);
+                }
+                break;
+                case AssautEchec:
+                {
+                    AssautEchec_add(animStates);
+                }
+                break;
+                case AssautReussi:
+                {
+                    AssautReussi_add(animStates);
+                }
+                break;
+                case Mort:
+                {
+                    Mort_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
         }
         
         //## statechart_method 
@@ -364,6 +511,36 @@ public class GIGN implements RiJStateConcept {
             return res;
         }
         
+        //## statechart_method 
+        public void Mort_add(AnimStates animStates) {
+            animStates.add("ROOT.Mort");
+        }
+        
+        //## statechart_method 
+        public void EtatNormal_add(AnimStates animStates) {
+            animStates.add("ROOT.EtatNormal");
+        }
+        
+        //## statechart_method 
+        public void EtatAlerte_add(AnimStates animStates) {
+            animStates.add("ROOT.EtatAlerte");
+        }
+        
+        //## statechart_method 
+        public void EnCoursAssaut_add(AnimStates animStates) {
+            animStates.add("ROOT.EnCoursAssaut");
+        }
+        
+        //## statechart_method 
+        public void AssautReussi_add(AnimStates animStates) {
+            animStates.add("ROOT.AssautReussi");
+        }
+        
+        //## statechart_method 
+        public void AssautEchec_add(AnimStates animStates) {
+            animStates.add("ROOT.AssautEchec");
+        }
+        
         //## auto_generated 
         protected void initStatechart() {
             rootState_subState = RiJNonState;
@@ -384,11 +561,13 @@ public class GIGN implements RiJStateConcept {
         //## statechart_method 
         public int EtatNormalTakeEventEtatAlerte() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
             EtatNormal_exit();
             //#[ transition 1 
             etatAlerte();
             //#]
             EtatAlerte_entDef();
+            animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -401,6 +580,7 @@ public class GIGN implements RiJStateConcept {
         
         //## statechart_method 
         public void Mort_enter() {
+            animInstance().notifyStateEntered("ROOT.Mort");
             rootState_subState = Mort;
             rootState_active = Mort;
             MortEnter();
@@ -409,11 +589,13 @@ public class GIGN implements RiJStateConcept {
         //## statechart_method 
         public int AssautEchecTakeEventGIGNMort() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("5");
             AssautEchec_exit();
             //#[ transition 5 
             gignMort();
             //#]
             Mort_entDef();
+            animInstance().notifyTransitionEnded("5");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -424,6 +606,7 @@ public class GIGN implements RiJStateConcept {
         
         //## statechart_method 
         public void EtatAlerte_enter() {
+            animInstance().notifyStateEntered("ROOT.EtatAlerte");
             rootState_subState = EtatAlerte;
             rootState_active = EtatAlerte;
             EtatAlerteEnter();
@@ -442,6 +625,7 @@ public class GIGN implements RiJStateConcept {
         
         //## statechart_method 
         public void EnCoursAssaut_enter() {
+            animInstance().notifyStateEntered("ROOT.EnCoursAssaut");
             rootState_subState = EnCoursAssaut;
             rootState_active = EnCoursAssaut;
             EnCoursAssautEnter();
@@ -449,6 +633,7 @@ public class GIGN implements RiJStateConcept {
         
         //## statechart_method 
         public void EtatNormal_enter() {
+            animInstance().notifyStateEntered("ROOT.EtatNormal");
             rootState_subState = EtatNormal;
             rootState_active = EtatNormal;
             EtatNormalEnter();
@@ -469,6 +654,7 @@ public class GIGN implements RiJStateConcept {
         //## statechart_method 
         public void Mort_exit() {
             MortExit();
+            animInstance().notifyStateExited("ROOT.Mort");
         }
         
         //## statechart_method 
@@ -502,6 +688,7 @@ public class GIGN implements RiJStateConcept {
         //## statechart_method 
         public void EtatAlerte_exit() {
             EtatAlerteExit();
+            animInstance().notifyStateExited("ROOT.EtatAlerte");
         }
         
         //## statechart_method 
@@ -512,10 +699,12 @@ public class GIGN implements RiJStateConcept {
         //## statechart_method 
         public void EtatNormal_exit() {
             EtatNormalExit();
+            animInstance().notifyStateExited("ROOT.EtatNormal");
         }
         
         //## statechart_method 
         public void AssautEchec_enter() {
+            animInstance().notifyStateEntered("ROOT.AssautEchec");
             rootState_subState = AssautEchec;
             rootState_active = AssautEchec;
             AssautEchecEnter();
@@ -539,11 +728,13 @@ public class GIGN implements RiJStateConcept {
         //## statechart_method 
         public int EnCoursAssautTakeEventAssautEchec() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("3");
             EnCoursAssaut_exit();
             //#[ transition 3 
             assautEchec();
             //#]
             AssautEchec_entDef();
+            animInstance().notifyTransitionEnded("3");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -555,6 +746,7 @@ public class GIGN implements RiJStateConcept {
         
         //## statechart_method 
         public void rootState_enter() {
+            animInstance().notifyStateEntered("ROOT");
             rootStateEnter();
         }
         
@@ -569,6 +761,7 @@ public class GIGN implements RiJStateConcept {
         //## statechart_method 
         public void AssautReussi_exit() {
             AssautReussiExit();
+            animInstance().notifyStateExited("ROOT.AssautReussi");
         }
         
         //## statechart_method 
@@ -578,11 +771,13 @@ public class GIGN implements RiJStateConcept {
         //## statechart_method 
         public int EnCoursAssautTakeEventAssautReussi() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("4");
             EnCoursAssaut_exit();
             //#[ transition 4 
             assautReussi();
             //#]
             AssautReussi_entDef();
+            animInstance().notifyTransitionEnded("4");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -593,17 +788,21 @@ public class GIGN implements RiJStateConcept {
         
         //## statechart_method 
         public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("0");
             EtatNormal_entDef();
+            animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
         public void AssautEchec_exit() {
             AssautEchecExit();
+            animInstance().notifyStateExited("ROOT.AssautEchec");
         }
         
         //## statechart_method 
         public void EnCoursAssaut_exit() {
             EnCoursAssautExit();
+            animInstance().notifyStateExited("ROOT.EnCoursAssaut");
         }
         
         //## statechart_method 
@@ -625,6 +824,7 @@ public class GIGN implements RiJStateConcept {
         
         //## statechart_method 
         public void AssautReussi_enter() {
+            animInstance().notifyStateEntered("ROOT.AssautReussi");
             rootState_subState = AssautReussi;
             rootState_active = AssautReussi;
             AssautReussiEnter();
@@ -655,16 +855,101 @@ public class GIGN implements RiJStateConcept {
         //## statechart_method 
         public int EtatAlerteTakeEventEnCoursAssaut() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
             EtatAlerte_exit();
             //#[ transition 2 
             enCoursAssaut();
             //#]
             EnCoursAssaut_entDef();
+            animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
+        /**  methods added just for design level debugging instrumentation */
+        public boolean startBehavior() {
+            try {
+              animInstance().notifyBehavioralMethodEntered("startBehavior",
+                  new ArgData[] {
+                   });
+              return super.startBehavior();
+            }
+            finally {
+              animInstance().notifyMethodExit();
+            }
+        }
+        public int takeEvent(RiJEvent event) { 
+            try { 
+              //animInstance().notifyTakeEvent(new AnimEvent(event));
+              animInstance().notifyBehavioralMethodEntered("takeEvent",
+                  new ArgData[] { new ArgData(RiJEvent.class, "event", event.toString())
+                   });
+              return super.takeEvent(event); 
+            }
+            finally { 
+              animInstance().notifyMethodExit();
+            }
+        }
+        /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
+        public AnimInstance animInstance() { 
+            return GIGN.this.animInstance(); 
+        }
+        
     }
+    //#[ ignore
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimClass getAnimClass() { 
+        return animClassGIGN; 
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
+         Object obj = null;
+         try {
+             obj = f.get(userInstance);
+         } catch(Exception e) {
+              java.lang.System.err.println("Exception: getting Field value: " + e);
+              e.printStackTrace();
+         }
+         return obj;
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimInstance animInstance() {
+        if (animate == null) 
+            animate = new Animate(); 
+        return animate; 
+    } 
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addAttributes(AnimAttributes msg) {
+        
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addRelations(AnimRelations msg) {
+        
+        msg.add("unCentreCommandement", false, true, unCentreCommandement);
+        msg.add("unOtage", false, true, unOtage);
+        msg.add("unTerroriste", false, true, unTerroriste);
+        msg.add("unPlace", false, true, unPlace);
+    }
+    /** An inner class added as instrumentation for animation */
+    public class Animate extends AnimInstance { 
+        public  Animate() { 
+            super(GIGN.this); 
+        } 
+        public void addAttributes(AnimAttributes msg) {
+            GIGN.this.addAttributes(msg);
+        }
+        public void addRelations(AnimRelations msg) {
+            GIGN.this.addRelations(msg);
+        }
+        
+        public void addStates(AnimStates msg) {
+            if ((reactive != null) && (reactive.isTerminated() == false))
+              reactive.rootState_add(msg);
+        }
+        
+    } 
+    //#]
+    
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/GIGN.java

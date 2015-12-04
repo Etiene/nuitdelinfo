@@ -12,6 +12,8 @@ package Default;
 
 //## auto_generated
 import com.ibm.rational.rhapsody.oxf.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.oxfinst.*;
 
 //----------------------------------------------------------------------------
 // Default/Default_pkgClass.java                                                                  
@@ -58,6 +60,49 @@ public class Default_pkgClass {
         super.finalize();
     }
     
+    private static void renameGlobalInstances() {
+        if(itsVictime != null)
+            {
+                AnimServices.setInstanceName(itsVictime, "itsVictime");
+            }
+        if(itsOtage != null)
+            {
+                AnimServices.setInstanceName(itsOtage, "itsOtage");
+            }
+        if(itsTerroriste != null)
+            {
+                AnimServices.setInstanceName(itsTerroriste, "itsTerroriste");
+            }
+        if(itsTemoin != null)
+            {
+                AnimServices.setInstanceName(itsTemoin, "itsTemoin");
+            }
+        if(itsCentreAppel != null)
+            {
+                AnimServices.setInstanceName(itsCentreAppel, "itsCentreAppel");
+            }
+        if(itsPolice != null)
+            {
+                AnimServices.setInstanceName(itsPolice, "itsPolice");
+            }
+        if(itsCentreCommandement != null)
+            {
+                AnimServices.setInstanceName(itsCentreCommandement, "itsCentreCommandement");
+            }
+        if(itsGIGN != null)
+            {
+                AnimServices.setInstanceName(itsGIGN, "itsGIGN");
+            }
+        if(itsSecours != null)
+            {
+                AnimServices.setInstanceName(itsSecours, "itsSecours");
+            }
+        if(itsPlace != null)
+            {
+                AnimServices.setInstanceName(itsPlace, "itsPlace");
+            }
+    }
+    
     //## auto_generated 
     protected void initRelations(RiJThread p_thread) {
         itsCentreAppel = new CentreAppel(p_thread);
@@ -84,6 +129,8 @@ public class Default_pkgClass {
         itsGIGN.setUnOtage(itsOtage);
         itsSecours.setUnVictime(itsVictime);
         itsSecours.setUnCentreCommandement(itsCentreCommandement);
+        itsTerroriste.setUnOtage(itsOtage);
+        renameGlobalInstances();
     }
     
     //## auto_generated 

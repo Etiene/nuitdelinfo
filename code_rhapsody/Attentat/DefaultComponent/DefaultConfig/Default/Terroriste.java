@@ -13,7 +13,11 @@ package Default;
 //## auto_generated
 import com.ibm.rational.rhapsody.oxf.*;
 //## auto_generated
+import com.ibm.rational.rhapsody.animation.*;
+//## auto_generated
 import com.ibm.rational.rhapsody.oxf.states.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
 // Default/Terroriste.java                                                                  
@@ -29,7 +33,14 @@ import com.ibm.rational.rhapsody.oxf.states.*;
 [[ * @since $Since]]
 */
 //## actor Terroriste 
-public class Terroriste implements RiJStateConcept {
+public class Terroriste implements RiJStateConcept, Animated {
+    
+    //#[ ignore
+    // Instrumentation attributes (Animation)
+    private Animate animate;
+    
+    public static AnimClass animClassTerroriste = new AnimClass("Default.Terroriste",false);
+    //#]
     
     public Reactive reactive;		//## ignore 
     
@@ -102,25 +113,55 @@ public class Terroriste implements RiJStateConcept {
     
     //## auto_generated 
     public  Terroriste(RiJThread p_thread) {
+        try {
+            animInstance().notifyConstructorEntered(animClassTerroriste.getUserClass(),
+               new ArgData[] {
+               });
+        
         reactive = new Reactive(p_thread);
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation seFaitExploser() 
     public void seFaitExploser() {
+        try {
+            animInstance().notifyMethodEntered("seFaitExploser",
+               new ArgData[] {
+               });
+        
         //#[ operation seFaitExploser() 
         System.out.println("le terroriste se fait exploser");
         unVictime.gen ( new EventVictimeMort()); 
         unOtage.gen(new EventMort());
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation terroristeTirSurVictime() 
     public void terroristeTirSurVictime() {
+        try {
+            animInstance().notifyMethodEntered("terroristeTirSurVictime",
+               new ArgData[] {
+               });
+        
         //#[ operation terroristeTirSurVictime() 
         System.out.println("le Terroriste tire sur la victime");
         unVictime.gen(new EventTirSurVictime());  
         unOtage.gen(new EventPriseOtage());
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## auto_generated 
@@ -131,6 +172,14 @@ public class Terroriste implements RiJStateConcept {
     //## auto_generated 
     public void __setUnGIGN(GIGN p_GIGN) {
         unGIGN = p_GIGN;
+        if(p_GIGN != null)
+            {
+                animInstance().notifyRelationAdded("unGIGN", p_GIGN);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unGIGN");
+            }
     }
     
     //## auto_generated 
@@ -153,6 +202,7 @@ public class Terroriste implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnGIGN() {
+        animInstance().notifyRelationCleared("unGIGN");
         unGIGN = null;
     }
     
@@ -164,6 +214,14 @@ public class Terroriste implements RiJStateConcept {
     //## auto_generated 
     public void __setUnOtage(otage p_otage) {
         unOtage = p_otage;
+        if(p_otage != null)
+            {
+                animInstance().notifyRelationAdded("unOtage", p_otage);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unOtage");
+            }
     }
     
     //## auto_generated 
@@ -186,6 +244,7 @@ public class Terroriste implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnOtage() {
+        animInstance().notifyRelationCleared("unOtage");
         unOtage = null;
     }
     
@@ -197,6 +256,14 @@ public class Terroriste implements RiJStateConcept {
     //## auto_generated 
     public void __setUnTemoin(Temoin p_Temoin) {
         unTemoin = p_Temoin;
+        if(p_Temoin != null)
+            {
+                animInstance().notifyRelationAdded("unTemoin", p_Temoin);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unTemoin");
+            }
     }
     
     //## auto_generated 
@@ -219,6 +286,7 @@ public class Terroriste implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnTemoin() {
+        animInstance().notifyRelationCleared("unTemoin");
         unTemoin = null;
     }
     
@@ -230,6 +298,14 @@ public class Terroriste implements RiJStateConcept {
     //## auto_generated 
     public void __setUnVictime(Victime p_Victime) {
         unVictime = p_Victime;
+        if(p_Victime != null)
+            {
+                animInstance().notifyRelationAdded("unVictime", p_Victime);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unVictime");
+            }
     }
     
     //## auto_generated 
@@ -252,6 +328,7 @@ public class Terroriste implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnVictime() {
+        animInstance().notifyRelationCleared("unVictime");
         unVictime = null;
     }
     
@@ -263,7 +340,7 @@ public class Terroriste implements RiJStateConcept {
     }
     
     //## ignore 
-    public class Reactive extends RiJStateReactive {
+    public class Reactive extends RiJStateReactive implements AnimatedReactive {
         
         // Default constructor 
         public Reactive() {
@@ -290,6 +367,35 @@ public class Terroriste implements RiJStateConcept {
         //## statechart_method 
         public boolean isCompleted(int state) {
             return true;
+        }
+        
+        //## statechart_method 
+        public void rootState_add(AnimStates animStates) {
+            animStates.add("ROOT");
+            switch (rootState_subState) {
+                case Inoffensif:
+                {
+                    Inoffensif_add(animStates);
+                }
+                break;
+                case EnAction:
+                {
+                    EnAction_add(animStates);
+                }
+                break;
+                case Neutralise:
+                {
+                    Neutralise_add(animStates);
+                }
+                break;
+                case SeFaitExploser:
+                {
+                    SeFaitExploser_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
         }
         
         //## statechart_method 
@@ -330,6 +436,26 @@ public class Terroriste implements RiJStateConcept {
             return res;
         }
         
+        //## statechart_method 
+        public void SeFaitExploser_add(AnimStates animStates) {
+            animStates.add("ROOT.SeFaitExploser");
+        }
+        
+        //## statechart_method 
+        public void Neutralise_add(AnimStates animStates) {
+            animStates.add("ROOT.Neutralise");
+        }
+        
+        //## statechart_method 
+        public void Inoffensif_add(AnimStates animStates) {
+            animStates.add("ROOT.Inoffensif");
+        }
+        
+        //## statechart_method 
+        public void EnAction_add(AnimStates animStates) {
+            animStates.add("ROOT.EnAction");
+        }
+        
         //## auto_generated 
         protected void initStatechart() {
             rootState_subState = RiJNonState;
@@ -339,11 +465,13 @@ public class Terroriste implements RiJStateConcept {
         //## statechart_method 
         public void Neutralise_exit() {
             NeutraliseExit();
+            animInstance().notifyStateExited("ROOT.Neutralise");
         }
         
         //## statechart_method 
         public void SeFaitExploser_exit() {
             SeFaitExploserExit();
+            animInstance().notifyStateExited("ROOT.SeFaitExploser");
         }
         
         //## statechart_method 
@@ -382,6 +510,7 @@ public class Terroriste implements RiJStateConcept {
         
         //## statechart_method 
         public void SeFaitExploser_enter() {
+            animInstance().notifyStateEntered("ROOT.SeFaitExploser");
             rootState_subState = SeFaitExploser;
             rootState_active = SeFaitExploser;
             SeFaitExploserEnter();
@@ -390,11 +519,13 @@ public class Terroriste implements RiJStateConcept {
         //## statechart_method 
         public int EnActionTakeEventSeFaitExploser() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
             EnAction_exit();
             //#[ transition 2 
             seFaitExploser();
             //#]
             SeFaitExploser_entDef();
+            animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -420,6 +551,7 @@ public class Terroriste implements RiJStateConcept {
         
         //## statechart_method 
         public void Inoffensif_enter() {
+            animInstance().notifyStateEntered("ROOT.Inoffensif");
             rootState_subState = Inoffensif;
             rootState_active = Inoffensif;
             InoffensifEnter();
@@ -438,6 +570,7 @@ public class Terroriste implements RiJStateConcept {
         
         //## statechart_method 
         public void EnAction_enter() {
+            animInstance().notifyStateEntered("ROOT.EnAction");
             rootState_subState = EnAction;
             rootState_active = EnAction;
             EnActionEnter();
@@ -457,17 +590,20 @@ public class Terroriste implements RiJStateConcept {
         //## statechart_method 
         public int InoffensifTakeEventTirSurVictime() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
             Inoffensif_exit();
             //#[ transition 1 
             terroristeTirSurVictime();
             //#]
             EnAction_entDef();
+            animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
         public void rootState_enter() {
+            animInstance().notifyStateEntered("ROOT");
             rootStateEnter();
         }
         
@@ -478,8 +614,10 @@ public class Terroriste implements RiJStateConcept {
         //## statechart_method 
         public int EnActionTakeEventTerroristeNeutralise() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("3");
             EnAction_exit();
             Neutralise_entDef();
+            animInstance().notifyTransitionEnded("3");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -487,6 +625,7 @@ public class Terroriste implements RiJStateConcept {
         //## statechart_method 
         public void EnAction_exit() {
             EnActionExit();
+            animInstance().notifyStateExited("ROOT.EnAction");
         }
         
         //## statechart_method 
@@ -504,11 +643,14 @@ public class Terroriste implements RiJStateConcept {
         
         //## statechart_method 
         public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("0");
             Inoffensif_entDef();
+            animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
         public void Neutralise_enter() {
+            animInstance().notifyStateEntered("ROOT.Neutralise");
             rootState_subState = Neutralise;
             rootState_active = Neutralise;
             NeutraliseEnter();
@@ -517,6 +659,7 @@ public class Terroriste implements RiJStateConcept {
         //## statechart_method 
         public void Inoffensif_exit() {
             InoffensifExit();
+            animInstance().notifyStateExited("ROOT.Inoffensif");
         }
         
         //## statechart_method 
@@ -531,7 +674,90 @@ public class Terroriste implements RiJStateConcept {
         public void rootStateExit() {
         }
         
+        /**  methods added just for design level debugging instrumentation */
+        public boolean startBehavior() {
+            try {
+              animInstance().notifyBehavioralMethodEntered("startBehavior",
+                  new ArgData[] {
+                   });
+              return super.startBehavior();
+            }
+            finally {
+              animInstance().notifyMethodExit();
+            }
+        }
+        public int takeEvent(RiJEvent event) { 
+            try { 
+              //animInstance().notifyTakeEvent(new AnimEvent(event));
+              animInstance().notifyBehavioralMethodEntered("takeEvent",
+                  new ArgData[] { new ArgData(RiJEvent.class, "event", event.toString())
+                   });
+              return super.takeEvent(event); 
+            }
+            finally { 
+              animInstance().notifyMethodExit();
+            }
+        }
+        /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
+        public AnimInstance animInstance() { 
+            return Terroriste.this.animInstance(); 
+        }
+        
     }
+    //#[ ignore
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimClass getAnimClass() { 
+        return animClassTerroriste; 
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
+         Object obj = null;
+         try {
+             obj = f.get(userInstance);
+         } catch(Exception e) {
+              java.lang.System.err.println("Exception: getting Field value: " + e);
+              e.printStackTrace();
+         }
+         return obj;
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimInstance animInstance() {
+        if (animate == null) 
+            animate = new Animate(); 
+        return animate; 
+    } 
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addAttributes(AnimAttributes msg) {
+        
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addRelations(AnimRelations msg) {
+        
+        msg.add("unTemoin", false, true, unTemoin);
+        msg.add("unOtage", false, true, unOtage);
+        msg.add("unVictime", false, true, unVictime);
+        msg.add("unGIGN", false, true, unGIGN);
+    }
+    /** An inner class added as instrumentation for animation */
+    public class Animate extends AnimInstance { 
+        public  Animate() { 
+            super(Terroriste.this); 
+        } 
+        public void addAttributes(AnimAttributes msg) {
+            Terroriste.this.addAttributes(msg);
+        }
+        public void addRelations(AnimRelations msg) {
+            Terroriste.this.addRelations(msg);
+        }
+        
+        public void addStates(AnimStates msg) {
+            if ((reactive != null) && (reactive.isTerminated() == false))
+              reactive.rootState_add(msg);
+        }
+        
+    } 
+    //#]
+    
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/Terroriste.java

@@ -15,7 +15,11 @@ import java.util.concurrent.TimeUnit;
 //## auto_generated
 import com.ibm.rational.rhapsody.oxf.*;
 //## auto_generated
+import com.ibm.rational.rhapsody.animation.*;
+//## auto_generated
 import com.ibm.rational.rhapsody.oxf.states.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
 // Default/centreCommandement.java                                                                  
@@ -31,7 +35,14 @@ import com.ibm.rational.rhapsody.oxf.states.*;
 [[ * @since $Since]]
 */
 //## actor centreCommandement 
-public class centreCommandement implements RiJStateConcept {
+public class centreCommandement implements RiJStateConcept, Animated {
+    
+    //#[ ignore
+    // Instrumentation attributes (Animation)
+    private Animate animate;
+    
+    public static AnimClass animClasscentreCommandement = new AnimClass("Default.centreCommandement",false);
+    //#]
     
     public Reactive reactive;		//## ignore 
     
@@ -50,10 +61,11 @@ public class centreCommandement implements RiJStateConcept {
     public static final int Reussi=1;
     public static final int PasAction=2;
     public static final int LanceAssaut=3;
-    public static final int EnAppel=4;
+    public static final int FinAppelPolice=4;
     public static final int Echec=5;
     public static final int DemandeInformation=6;
-    public static final int AnalyseSituation=7;
+    public static final int DebutAppelPolice=7;
+    public static final int AnalyseSituation=8;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -109,60 +121,160 @@ public class centreCommandement implements RiJStateConcept {
     
     //## auto_generated 
     public  centreCommandement(RiJThread p_thread) {
+        try {
+            animInstance().notifyConstructorEntered(animClasscentreCommandement.getUserClass(),
+               new ArgData[] {
+               });
+        
         reactive = new Reactive(p_thread);
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation analyseSituation() 
     public void analyseSituation() {
+        try {
+            animInstance().notifyMethodEntered("analyseSituation",
+               new ArgData[] {
+               });
+        
         //#[ operation analyseSituation() 
-        System.out.println("Analyse la situation");
+        System.out.println("Analyse la situation");   
+        this.gen(new EventDemandeInformation());
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation assautEchec() 
     public void assautEchec() {
+        try {
+            animInstance().notifyMethodEntered("assautEchec",
+               new ArgData[] {
+               });
+        
         //#[ operation assautEchec() 
         System.out.println("Echec de Assaut");
         unGIGN.gen (new EventGIGNMort());
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    //## operation debutAppelPolice() 
+    public void debutAppelPolice() {
+        try {
+            animInstance().notifyMethodEntered("debutAppelPolice",
+               new ArgData[] {
+               });
+        
+        //#[ operation debutAppelPolice() 
+        System.out.println("debut appel entre police et centre commandement");
+        try {
+        		TimeUnit.SECONDS.sleep(5);
+        		this.gen(new EventFinAppelPolice());
+        		unPolice.gen( new EventFinAppelCentreCommandement());
+        	} catch (InterruptedException e) {
+        		
+        		e.printStackTrace();
+        	}
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation demandeInformation() 
     public void demandeInformation() {
+        try {
+            animInstance().notifyMethodEntered("demandeInformation",
+               new ArgData[] {
+               });
+        
         //#[ operation demandeInformation() 
         unTemoin.gen(new EventCooperation());  
         try {
         		TimeUnit.SECONDS.sleep(2); 
         		unTemoin.gen(new EventFinCooperation());  
         		unPlace.gen(new EventNonSecurisee());
-        		unGIGN.gen(new EventEtatAlerte());
-        		new EventLanceAssaut();
+        		unGIGN.gen(new EventEtatAlerte()); 
+        		unSecours.gen(new EventEtatAlerte());
+        		this.gen(new EventLanceAssaut());
         	} catch (InterruptedException e) {
         		
         		e.printStackTrace();
         	}
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
-    //## operation enAppelle() 
-    public void enAppelle() {
-        //#[ operation enAppelle() 
+    //## operation finAppelPolice() 
+    public void finAppelPolice() {
+        try {
+            animInstance().notifyMethodEntered("finAppelPolice",
+               new ArgData[] {
+               });
+        
+        //#[ operation finAppelPolice() 
+        System.out.println("fin appel entre police et centre commandement");
+        this.gen(new EventAnalyseSituation());
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation lanceAssaut() 
     public void lanceAssaut() {
+        try {
+            animInstance().notifyMethodEntered("lanceAssaut",
+               new ArgData[] {
+               });
+        
         //#[ operation lanceAssaut() 
-        System.out.println("Debut Assaut");
+        System.out.println("Debut Assaut"); 
+        unGIGN.gen(new EventEnCoursAssaut());
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation reussi() 
     public void reussi() {
+        try {
+            animInstance().notifyMethodEntered("reussi",
+               new ArgData[] {
+               });
+        
         //#[ operation reussi() 
         unPlace.gen(new EventSecurisee());
         unSecours.gen(new EventEnvoye());
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## auto_generated 
@@ -173,6 +285,14 @@ public class centreCommandement implements RiJStateConcept {
     //## auto_generated 
     public void __setUnGIGN(GIGN p_GIGN) {
         unGIGN = p_GIGN;
+        if(p_GIGN != null)
+            {
+                animInstance().notifyRelationAdded("unGIGN", p_GIGN);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unGIGN");
+            }
     }
     
     //## auto_generated 
@@ -195,6 +315,7 @@ public class centreCommandement implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnGIGN() {
+        animInstance().notifyRelationCleared("unGIGN");
         unGIGN = null;
     }
     
@@ -206,6 +327,14 @@ public class centreCommandement implements RiJStateConcept {
     //## auto_generated 
     public void __setUnPlace(Place p_Place) {
         unPlace = p_Place;
+        if(p_Place != null)
+            {
+                animInstance().notifyRelationAdded("unPlace", p_Place);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unPlace");
+            }
     }
     
     //## auto_generated 
@@ -228,6 +357,7 @@ public class centreCommandement implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnPlace() {
+        animInstance().notifyRelationCleared("unPlace");
         unPlace = null;
     }
     
@@ -239,6 +369,14 @@ public class centreCommandement implements RiJStateConcept {
     //## auto_generated 
     public void __setUnPolice(police p_police) {
         unPolice = p_police;
+        if(p_police != null)
+            {
+                animInstance().notifyRelationAdded("unPolice", p_police);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unPolice");
+            }
     }
     
     //## auto_generated 
@@ -261,6 +399,7 @@ public class centreCommandement implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnPolice() {
+        animInstance().notifyRelationCleared("unPolice");
         unPolice = null;
     }
     
@@ -272,6 +411,14 @@ public class centreCommandement implements RiJStateConcept {
     //## auto_generated 
     public void __setUnSecours(Secours p_Secours) {
         unSecours = p_Secours;
+        if(p_Secours != null)
+            {
+                animInstance().notifyRelationAdded("unSecours", p_Secours);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unSecours");
+            }
     }
     
     //## auto_generated 
@@ -294,6 +441,7 @@ public class centreCommandement implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnSecours() {
+        animInstance().notifyRelationCleared("unSecours");
         unSecours = null;
     }
     
@@ -305,6 +453,14 @@ public class centreCommandement implements RiJStateConcept {
     //## auto_generated 
     public void __setUnTemoin(Temoin p_Temoin) {
         unTemoin = p_Temoin;
+        if(p_Temoin != null)
+            {
+                animInstance().notifyRelationAdded("unTemoin", p_Temoin);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unTemoin");
+            }
     }
     
     //## auto_generated 
@@ -327,6 +483,7 @@ public class centreCommandement implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnTemoin() {
+        animInstance().notifyRelationCleared("unTemoin");
         unTemoin = null;
     }
     
@@ -338,7 +495,7 @@ public class centreCommandement implements RiJStateConcept {
     }
     
     //## ignore 
-    public class Reactive extends RiJStateReactive {
+    public class Reactive extends RiJStateReactive implements AnimatedReactive {
         
         // Default constructor 
         public Reactive() {
@@ -368,6 +525,55 @@ public class centreCommandement implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void rootState_add(AnimStates animStates) {
+            animStates.add("ROOT");
+            switch (rootState_subState) {
+                case PasAction:
+                {
+                    PasAction_add(animStates);
+                }
+                break;
+                case DebutAppelPolice:
+                {
+                    DebutAppelPolice_add(animStates);
+                }
+                break;
+                case AnalyseSituation:
+                {
+                    AnalyseSituation_add(animStates);
+                }
+                break;
+                case DemandeInformation:
+                {
+                    DemandeInformation_add(animStates);
+                }
+                break;
+                case LanceAssaut:
+                {
+                    LanceAssaut_add(animStates);
+                }
+                break;
+                case Echec:
+                {
+                    Echec_add(animStates);
+                }
+                break;
+                case Reussi:
+                {
+                    Reussi_add(animStates);
+                }
+                break;
+                case FinAppelPolice:
+                {
+                    FinAppelPolice_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
+        }
+        
+        //## statechart_method 
         public void rootState_entDef() {
             {
                 rootState_enter();
@@ -384,9 +590,9 @@ public class centreCommandement implements RiJStateConcept {
                     res = PasAction_takeEvent(id);
                 }
                 break;
-                case EnAppel:
+                case DebutAppelPolice:
                 {
-                    res = EnAppel_takeEvent(id);
+                    res = DebutAppelPolice_takeEvent(id);
                 }
                 break;
                 case AnalyseSituation:
@@ -414,10 +620,55 @@ public class centreCommandement implements RiJStateConcept {
                     res = Reussi_takeEvent(id);
                 }
                 break;
+                case FinAppelPolice:
+                {
+                    res = FinAppelPolice_takeEvent(id);
+                }
+                break;
                 default:
                     break;
             }
             return res;
+        }
+        
+        //## statechart_method 
+        public void Reussi_add(AnimStates animStates) {
+            animStates.add("ROOT.Reussi");
+        }
+        
+        //## statechart_method 
+        public void PasAction_add(AnimStates animStates) {
+            animStates.add("ROOT.PasAction");
+        }
+        
+        //## statechart_method 
+        public void LanceAssaut_add(AnimStates animStates) {
+            animStates.add("ROOT.LanceAssaut");
+        }
+        
+        //## statechart_method 
+        public void FinAppelPolice_add(AnimStates animStates) {
+            animStates.add("ROOT.FinAppelPolice");
+        }
+        
+        //## statechart_method 
+        public void Echec_add(AnimStates animStates) {
+            animStates.add("ROOT.Echec");
+        }
+        
+        //## statechart_method 
+        public void DemandeInformation_add(AnimStates animStates) {
+            animStates.add("ROOT.DemandeInformation");
+        }
+        
+        //## statechart_method 
+        public void DebutAppelPolice_add(AnimStates animStates) {
+            animStates.add("ROOT.DebutAppelPolice");
+        }
+        
+        //## statechart_method 
+        public void AnalyseSituation_add(AnimStates animStates) {
+            animStates.add("ROOT.AnalyseSituation");
         }
         
         //## auto_generated 
@@ -429,11 +680,13 @@ public class centreCommandement implements RiJStateConcept {
         //## statechart_method 
         public int AnalyseSituationTakeEventDemandeInformation() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
             AnalyseSituation_exit();
-            //#[ transition 3 
+            //#[ transition 2 
             demandeInformation();
             //#]
             DemandeInformation_entDef();
+            animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -447,14 +700,34 @@ public class centreCommandement implements RiJStateConcept {
         }
         
         //## statechart_method 
-        public void EnAppelEnter() {
+        public int FinAppelPoliceTakeEventAnalyseSituation() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("7");
+            FinAppelPolice_exit();
+            //#[ transition 7 
+            analyseSituation();
+            //#]
+            AnalyseSituation_entDef();
+            animInstance().notifyTransitionEnded("7");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void FinAppelPolice_entDef() {
+            FinAppelPolice_enter();
         }
         
         //## statechart_method 
         public void Echec_enter() {
+            animInstance().notifyStateEntered("ROOT.Echec");
             rootState_subState = Echec;
             rootState_active = Echec;
             EchecEnter();
+        }
+        
+        //## statechart_method 
+        public void FinAppelPoliceEnter() {
         }
         
         //## statechart_method 
@@ -463,6 +736,7 @@ public class centreCommandement implements RiJStateConcept {
         
         //## statechart_method 
         public void LanceAssaut_enter() {
+            animInstance().notifyStateEntered("ROOT.LanceAssaut");
             rootState_subState = LanceAssaut;
             rootState_active = LanceAssaut;
             LanceAssautEnter();
@@ -481,36 +755,46 @@ public class centreCommandement implements RiJStateConcept {
         }
         
         //## statechart_method 
-        public void EchecExit() {
-        }
-        
-        //## statechart_method 
-        public int EnAppelTakeEventAnalyseSituation() {
+        public int DebutAppelPoliceTakeEventFinAppelPolice() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            EnAppel_exit();
-            //#[ transition 2 
-            analyseSituation();
+            animInstance().notifyTransitionStarted("6");
+            DebutAppelPolice_exit();
+            //#[ transition 6 
+            finAppelPolice();
             //#]
-            AnalyseSituation_entDef();
+            FinAppelPolice_entDef();
+            animInstance().notifyTransitionEnded("6");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void EnAppel_enter() {
-            rootState_subState = EnAppel;
-            rootState_active = EnAppel;
-            EnAppelEnter();
+        public void DebutAppelPolice_entDef() {
+            DebutAppelPolice_enter();
+        }
+        
+        //## statechart_method 
+        public void EchecExit() {
+        }
+        
+        //## statechart_method 
+        public void FinAppelPolice_enter() {
+            animInstance().notifyStateEntered("ROOT.FinAppelPolice");
+            rootState_subState = FinAppelPolice;
+            rootState_active = FinAppelPolice;
+            FinAppelPoliceEnter();
         }
         
         //## statechart_method 
         public int LanceAssautTakeEventReussi() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("5");
             LanceAssaut_exit();
-            //#[ transition 6 
+            //#[ transition 5 
             reussi();
             //#]
             Reussi_entDef();
+            animInstance().notifyTransitionEnded("5");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -518,26 +802,23 @@ public class centreCommandement implements RiJStateConcept {
         //## statechart_method 
         public void Reussi_exit() {
             ReussiExit();
+            animInstance().notifyStateExited("ROOT.Reussi");
         }
         
         //## statechart_method 
         public void Reussi_enter() {
+            animInstance().notifyStateEntered("ROOT.Reussi");
             rootState_subState = Reussi;
             rootState_active = Reussi;
             ReussiEnter();
         }
         
         //## statechart_method 
-        public void EnAppel_exit() {
-            EnAppelExit();
-        }
-        
-        //## statechart_method 
         public int PasAction_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(EventRecoitAppel.EventRecoitAppel_Default_id))
+            if(event.isTypeOf(EventDebutAppelPolice.EventDebutAppelPolice_Default_id))
                 {
-                    res = PasActionTakeEventRecoitAppel();
+                    res = PasActionTakeEventDebutAppelPolice();
                 }
             
             return res;
@@ -554,29 +835,24 @@ public class centreCommandement implements RiJStateConcept {
         }
         
         //## statechart_method 
-        public void EnAppelExit() {
+        public void FinAppelPolice_exit() {
+            FinAppelPoliceExit();
+            animInstance().notifyStateExited("ROOT.FinAppelPolice");
         }
         
         //## statechart_method 
         public void LanceAssaut_exit() {
             LanceAssautExit();
-        }
-        
-        //## statechart_method 
-        public int PasActionTakeEventRecoitAppel() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            PasAction_exit();
-            //#[ transition 1 
-            enAppelle();
-            //#]
-            EnAppel_entDef();
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
+            animInstance().notifyStateExited("ROOT.LanceAssaut");
         }
         
         //## statechart_method 
         public void Echec_entDef() {
             Echec_enter();
+        }
+        
+        //## statechart_method 
+        public void FinAppelPoliceExit() {
         }
         
         //## statechart_method 
@@ -598,6 +874,10 @@ public class centreCommandement implements RiJStateConcept {
         
         //## statechart_method 
         public void AnalyseSituationExit() {
+        }
+        
+        //## statechart_method 
+        public void DebutAppelPoliceEnter() {
         }
         
         //## statechart_method 
@@ -624,8 +904,10 @@ public class centreCommandement implements RiJStateConcept {
         //## statechart_method 
         public int LanceAssautTakeEventEchec() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("4");
             LanceAssaut_exit();
             Echec_entDef();
+            animInstance().notifyTransitionEnded("4");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -636,7 +918,22 @@ public class centreCommandement implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int PasActionTakeEventDebutAppelPolice() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
+            PasAction_exit();
+            //#[ transition 1 
+            debutAppelPolice();
+            //#]
+            DebutAppelPolice_entDef();
+            animInstance().notifyTransitionEnded("1");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void rootState_enter() {
+            animInstance().notifyStateEntered("ROOT");
             rootStateEnter();
         }
         
@@ -645,25 +942,48 @@ public class centreCommandement implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int DebutAppelPolice_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(EventFinAppelPolice.EventFinAppelPolice_Default_id))
+                {
+                    res = DebutAppelPoliceTakeEventFinAppelPolice();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
         public int DemandeInformationTakeEventLanceAssaut() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("3");
             DemandeInformation_exit();
-            //#[ transition 4 
+            //#[ transition 3 
             lanceAssaut();
             //#]
             LanceAssaut_entDef();
+            animInstance().notifyTransitionEnded("3");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
-        public void EnAppel_entDef() {
-            EnAppel_enter();
+        public int FinAppelPolice_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(EventAnalyseSituation.EventAnalyseSituation_Default_id))
+                {
+                    res = FinAppelPoliceTakeEventAnalyseSituation();
+                }
+            
+            return res;
         }
         
         //## statechart_method 
         public void Reussi_entDef() {
             Reussi_enter();
+        }
+        
+        //## statechart_method 
+        public void DebutAppelPoliceExit() {
         }
         
         //## statechart_method 
@@ -686,8 +1006,16 @@ public class centreCommandement implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void DebutAppelPolice_exit() {
+            DebutAppelPoliceExit();
+            animInstance().notifyStateExited("ROOT.DebutAppelPolice");
+        }
+        
+        //## statechart_method 
         public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("0");
             PasAction_entDef();
+            animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
@@ -695,8 +1023,17 @@ public class centreCommandement implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void DebutAppelPolice_enter() {
+            animInstance().notifyStateEntered("ROOT.DebutAppelPolice");
+            rootState_subState = DebutAppelPolice;
+            rootState_active = DebutAppelPolice;
+            DebutAppelPoliceEnter();
+        }
+        
+        //## statechart_method 
         public void DemandeInformation_exit() {
             DemandeInformationExit();
+            animInstance().notifyStateExited("ROOT.DemandeInformation");
         }
         
         //## statechart_method 
@@ -704,18 +1041,8 @@ public class centreCommandement implements RiJStateConcept {
         }
         
         //## statechart_method 
-        public int EnAppel_takeEvent(short id) {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(EventAnalyseSituation.EventAnalyseSituation_Default_id))
-                {
-                    res = EnAppelTakeEventAnalyseSituation();
-                }
-            
-            return res;
-        }
-        
-        //## statechart_method 
         public void PasAction_enter() {
+            animInstance().notifyStateEntered("ROOT.PasAction");
             rootState_subState = PasAction;
             rootState_active = PasAction;
             PasActionEnter();
@@ -735,6 +1062,7 @@ public class centreCommandement implements RiJStateConcept {
         //## statechart_method 
         public void AnalyseSituation_exit() {
             AnalyseSituationExit();
+            animInstance().notifyStateExited("ROOT.AnalyseSituation");
         }
         
         //## statechart_method 
@@ -743,6 +1071,7 @@ public class centreCommandement implements RiJStateConcept {
         
         //## statechart_method 
         public void AnalyseSituation_enter() {
+            animInstance().notifyStateEntered("ROOT.AnalyseSituation");
             rootState_subState = AnalyseSituation;
             rootState_active = AnalyseSituation;
             AnalyseSituationEnter();
@@ -751,10 +1080,12 @@ public class centreCommandement implements RiJStateConcept {
         //## statechart_method 
         public void PasAction_exit() {
             PasActionExit();
+            animInstance().notifyStateExited("ROOT.PasAction");
         }
         
         //## statechart_method 
         public void DemandeInformation_enter() {
+            animInstance().notifyStateEntered("ROOT.DemandeInformation");
             rootState_subState = DemandeInformation;
             rootState_active = DemandeInformation;
             DemandeInformationEnter();
@@ -763,9 +1094,94 @@ public class centreCommandement implements RiJStateConcept {
         //## statechart_method 
         public void Echec_exit() {
             EchecExit();
+            animInstance().notifyStateExited("ROOT.Echec");
+        }
+        
+        /**  methods added just for design level debugging instrumentation */
+        public boolean startBehavior() {
+            try {
+              animInstance().notifyBehavioralMethodEntered("startBehavior",
+                  new ArgData[] {
+                   });
+              return super.startBehavior();
+            }
+            finally {
+              animInstance().notifyMethodExit();
+            }
+        }
+        public int takeEvent(RiJEvent event) { 
+            try { 
+              //animInstance().notifyTakeEvent(new AnimEvent(event));
+              animInstance().notifyBehavioralMethodEntered("takeEvent",
+                  new ArgData[] { new ArgData(RiJEvent.class, "event", event.toString())
+                   });
+              return super.takeEvent(event); 
+            }
+            finally { 
+              animInstance().notifyMethodExit();
+            }
+        }
+        /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
+        public AnimInstance animInstance() { 
+            return centreCommandement.this.animInstance(); 
         }
         
     }
+    //#[ ignore
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimClass getAnimClass() { 
+        return animClasscentreCommandement; 
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
+         Object obj = null;
+         try {
+             obj = f.get(userInstance);
+         } catch(Exception e) {
+              java.lang.System.err.println("Exception: getting Field value: " + e);
+              e.printStackTrace();
+         }
+         return obj;
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimInstance animInstance() {
+        if (animate == null) 
+            animate = new Animate(); 
+        return animate; 
+    } 
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addAttributes(AnimAttributes msg) {
+        
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addRelations(AnimRelations msg) {
+        
+        msg.add("unPolice", false, true, unPolice);
+        msg.add("unGIGN", false, true, unGIGN);
+        msg.add("unTemoin", false, true, unTemoin);
+        msg.add("unPlace", false, true, unPlace);
+        msg.add("unSecours", false, true, unSecours);
+    }
+    /** An inner class added as instrumentation for animation */
+    public class Animate extends AnimInstance { 
+        public  Animate() { 
+            super(centreCommandement.this); 
+        } 
+        public void addAttributes(AnimAttributes msg) {
+            centreCommandement.this.addAttributes(msg);
+        }
+        public void addRelations(AnimRelations msg) {
+            centreCommandement.this.addRelations(msg);
+        }
+        
+        public void addStates(AnimStates msg) {
+            if ((reactive != null) && (reactive.isTerminated() == false))
+              reactive.rootState_add(msg);
+        }
+        
+    } 
+    //#]
+    
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/centreCommandement.java

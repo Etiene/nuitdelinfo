@@ -13,7 +13,11 @@ package Default;
 //## auto_generated
 import com.ibm.rational.rhapsody.oxf.*;
 //## auto_generated
+import com.ibm.rational.rhapsody.animation.*;
+//## auto_generated
 import com.ibm.rational.rhapsody.oxf.states.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
 // Default/otage.java                                                                  
@@ -29,7 +33,14 @@ import com.ibm.rational.rhapsody.oxf.states.*;
 [[ * @since $Since]]
 */
 //## actor otage 
-public class otage implements RiJStateConcept {
+public class otage implements RiJStateConcept, Animated {
+    
+    //#[ ignore
+    // Instrumentation attributes (Animation)
+    private Animate animate;
+    
+    public static AnimClass animClassotage = new AnimClass("Default.otage",false);
+    //#]
     
     public Reactive reactive;		//## ignore 
     
@@ -102,28 +113,68 @@ public class otage implements RiJStateConcept {
     
     //## auto_generated 
     public  otage(RiJThread p_thread) {
+        try {
+            animInstance().notifyConstructorEntered(animClassotage.getUserClass(),
+               new ArgData[] {
+               });
+        
         reactive = new Reactive(p_thread);
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation libre() 
     public void libre() {
+        try {
+            animInstance().notifyMethodEntered("libre",
+               new ArgData[] {
+               });
+        
         //#[ operation libre() 
         System.out.println("Les otages sont libres");
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation mort() 
     public void mort() {
+        try {
+            animInstance().notifyMethodEntered("mort",
+               new ArgData[] {
+               });
+        
         //#[ operation mort() 
         System.out.println("Les otages sont morts");
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation priseOtage() 
     public void priseOtage() {
+        try {
+            animInstance().notifyMethodEntered("priseOtage",
+               new ArgData[] {
+               });
+        
         //#[ operation priseOtage() 
         System.out.println("Prise otage en cours");
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## auto_generated 
@@ -134,6 +185,14 @@ public class otage implements RiJStateConcept {
     //## auto_generated 
     public void __setUnGIGN(GIGN p_GIGN) {
         unGIGN = p_GIGN;
+        if(p_GIGN != null)
+            {
+                animInstance().notifyRelationAdded("unGIGN", p_GIGN);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unGIGN");
+            }
     }
     
     //## auto_generated 
@@ -156,6 +215,7 @@ public class otage implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnGIGN() {
+        animInstance().notifyRelationCleared("unGIGN");
         unGIGN = null;
     }
     
@@ -167,6 +227,14 @@ public class otage implements RiJStateConcept {
     //## auto_generated 
     public void __setUnTemoin(Temoin p_Temoin) {
         unTemoin = p_Temoin;
+        if(p_Temoin != null)
+            {
+                animInstance().notifyRelationAdded("unTemoin", p_Temoin);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unTemoin");
+            }
     }
     
     //## auto_generated 
@@ -189,6 +257,7 @@ public class otage implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnTemoin() {
+        animInstance().notifyRelationCleared("unTemoin");
         unTemoin = null;
     }
     
@@ -200,6 +269,14 @@ public class otage implements RiJStateConcept {
     //## auto_generated 
     public void __setUnTerroriste(Terroriste p_Terroriste) {
         unTerroriste = p_Terroriste;
+        if(p_Terroriste != null)
+            {
+                animInstance().notifyRelationAdded("unTerroriste", p_Terroriste);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unTerroriste");
+            }
     }
     
     //## auto_generated 
@@ -222,6 +299,7 @@ public class otage implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnTerroriste() {
+        animInstance().notifyRelationCleared("unTerroriste");
         unTerroriste = null;
     }
     
@@ -233,6 +311,14 @@ public class otage implements RiJStateConcept {
     //## auto_generated 
     public void __setUnVictime(Victime p_Victime) {
         unVictime = p_Victime;
+        if(p_Victime != null)
+            {
+                animInstance().notifyRelationAdded("unVictime", p_Victime);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unVictime");
+            }
     }
     
     //## auto_generated 
@@ -255,6 +341,7 @@ public class otage implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnVictime() {
+        animInstance().notifyRelationCleared("unVictime");
         unVictime = null;
     }
     
@@ -266,7 +353,7 @@ public class otage implements RiJStateConcept {
     }
     
     //## ignore 
-    public class Reactive extends RiJStateReactive {
+    public class Reactive extends RiJStateReactive implements AnimatedReactive {
         
         // Default constructor 
         public Reactive() {
@@ -293,6 +380,35 @@ public class otage implements RiJStateConcept {
         //## statechart_method 
         public boolean isCompleted(int state) {
             return true;
+        }
+        
+        //## statechart_method 
+        public void rootState_add(AnimStates animStates) {
+            animStates.add("ROOT");
+            switch (rootState_subState) {
+                case EtatNormal:
+                {
+                    EtatNormal_add(animStates);
+                }
+                break;
+                case PriseOtage:
+                {
+                    PriseOtage_add(animStates);
+                }
+                break;
+                case Libre:
+                {
+                    Libre_add(animStates);
+                }
+                break;
+                case Mort:
+                {
+                    Mort_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
         }
         
         //## statechart_method 
@@ -333,6 +449,26 @@ public class otage implements RiJStateConcept {
             return res;
         }
         
+        //## statechart_method 
+        public void PriseOtage_add(AnimStates animStates) {
+            animStates.add("ROOT.PriseOtage");
+        }
+        
+        //## statechart_method 
+        public void Mort_add(AnimStates animStates) {
+            animStates.add("ROOT.Mort");
+        }
+        
+        //## statechart_method 
+        public void Libre_add(AnimStates animStates) {
+            animStates.add("ROOT.Libre");
+        }
+        
+        //## statechart_method 
+        public void EtatNormal_add(AnimStates animStates) {
+            animStates.add("ROOT.EtatNormal");
+        }
+        
         //## auto_generated 
         protected void initStatechart() {
             rootState_subState = RiJNonState;
@@ -347,6 +483,7 @@ public class otage implements RiJStateConcept {
         
         //## statechart_method 
         public void Mort_enter() {
+            animInstance().notifyStateEntered("ROOT.Mort");
             rootState_subState = Mort;
             rootState_active = Mort;
             MortEnter();
@@ -355,6 +492,7 @@ public class otage implements RiJStateConcept {
         //## statechart_method 
         public void Libre_exit() {
             LibreExit();
+            animInstance().notifyStateExited("ROOT.Libre");
         }
         
         //## statechart_method 
@@ -367,6 +505,7 @@ public class otage implements RiJStateConcept {
         
         //## statechart_method 
         public void EtatNormal_enter() {
+            animInstance().notifyStateEntered("ROOT.EtatNormal");
             rootState_subState = EtatNormal;
             rootState_active = EtatNormal;
             EtatNormalEnter();
@@ -385,11 +524,13 @@ public class otage implements RiJStateConcept {
         //## statechart_method 
         public void Mort_exit() {
             MortExit();
+            animInstance().notifyStateExited("ROOT.Mort");
         }
         
         //## statechart_method 
         public void PriseOtage_exit() {
             PriseOtageExit();
+            animInstance().notifyStateExited("ROOT.PriseOtage");
         }
         
         //## statechart_method 
@@ -406,6 +547,7 @@ public class otage implements RiJStateConcept {
         //## statechart_method 
         public void EtatNormal_exit() {
             EtatNormalExit();
+            animInstance().notifyStateExited("ROOT.EtatNormal");
         }
         
         //## statechart_method 
@@ -416,17 +558,20 @@ public class otage implements RiJStateConcept {
         //## statechart_method 
         public int PriseOtageTakeEventLibre() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
             PriseOtage_exit();
             //#[ transition 2 
             libre();
             //#]
             Libre_entDef();
+            animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
         public void rootState_enter() {
+            animInstance().notifyStateEntered("ROOT");
             rootStateEnter();
         }
         
@@ -437,11 +582,13 @@ public class otage implements RiJStateConcept {
         //## statechart_method 
         public int EtatNormalTakeEventPriseOtage() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
             EtatNormal_exit();
             //#[ transition 1 
             priseOtage();
             //#]
             PriseOtage_entDef();
+            animInstance().notifyTransitionEnded("1");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -452,6 +599,7 @@ public class otage implements RiJStateConcept {
         
         //## statechart_method 
         public void Libre_enter() {
+            animInstance().notifyStateEntered("ROOT.Libre");
             rootState_subState = Libre;
             rootState_active = Libre;
             LibreEnter();
@@ -474,6 +622,7 @@ public class otage implements RiJStateConcept {
         
         //## statechart_method 
         public void PriseOtage_enter() {
+            animInstance().notifyStateEntered("ROOT.PriseOtage");
             rootState_subState = PriseOtage;
             rootState_active = PriseOtage;
             PriseOtageEnter();
@@ -482,11 +631,13 @@ public class otage implements RiJStateConcept {
         //## statechart_method 
         public int PriseOtageTakeEventMort() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("3");
             PriseOtage_exit();
             //#[ transition 3 
             mort();
             //#]
             Mort_entDef();
+            animInstance().notifyTransitionEnded("3");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -497,7 +648,9 @@ public class otage implements RiJStateConcept {
         
         //## statechart_method 
         public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("0");
             EtatNormal_entDef();
+            animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
@@ -537,7 +690,90 @@ public class otage implements RiJStateConcept {
         public void LibreExit() {
         }
         
+        /**  methods added just for design level debugging instrumentation */
+        public boolean startBehavior() {
+            try {
+              animInstance().notifyBehavioralMethodEntered("startBehavior",
+                  new ArgData[] {
+                   });
+              return super.startBehavior();
+            }
+            finally {
+              animInstance().notifyMethodExit();
+            }
+        }
+        public int takeEvent(RiJEvent event) { 
+            try { 
+              //animInstance().notifyTakeEvent(new AnimEvent(event));
+              animInstance().notifyBehavioralMethodEntered("takeEvent",
+                  new ArgData[] { new ArgData(RiJEvent.class, "event", event.toString())
+                   });
+              return super.takeEvent(event); 
+            }
+            finally { 
+              animInstance().notifyMethodExit();
+            }
+        }
+        /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
+        public AnimInstance animInstance() { 
+            return otage.this.animInstance(); 
+        }
+        
     }
+    //#[ ignore
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimClass getAnimClass() { 
+        return animClassotage; 
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
+         Object obj = null;
+         try {
+             obj = f.get(userInstance);
+         } catch(Exception e) {
+              java.lang.System.err.println("Exception: getting Field value: " + e);
+              e.printStackTrace();
+         }
+         return obj;
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimInstance animInstance() {
+        if (animate == null) 
+            animate = new Animate(); 
+        return animate; 
+    } 
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addAttributes(AnimAttributes msg) {
+        
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addRelations(AnimRelations msg) {
+        
+        msg.add("unTemoin", false, true, unTemoin);
+        msg.add("unVictime", false, true, unVictime);
+        msg.add("unGIGN", false, true, unGIGN);
+        msg.add("unTerroriste", false, true, unTerroriste);
+    }
+    /** An inner class added as instrumentation for animation */
+    public class Animate extends AnimInstance { 
+        public  Animate() { 
+            super(otage.this); 
+        } 
+        public void addAttributes(AnimAttributes msg) {
+            otage.this.addAttributes(msg);
+        }
+        public void addRelations(AnimRelations msg) {
+            otage.this.addRelations(msg);
+        }
+        
+        public void addStates(AnimStates msg) {
+            if ((reactive != null) && (reactive.isTerminated() == false))
+              reactive.rootState_add(msg);
+        }
+        
+    } 
+    //#]
+    
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/otage.java

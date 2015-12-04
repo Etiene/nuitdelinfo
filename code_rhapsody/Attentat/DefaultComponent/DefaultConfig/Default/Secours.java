@@ -15,7 +15,11 @@ import java.util.concurrent.TimeUnit;
 //## auto_generated
 import com.ibm.rational.rhapsody.oxf.*;
 //## auto_generated
+import com.ibm.rational.rhapsody.animation.*;
+//## auto_generated
 import com.ibm.rational.rhapsody.oxf.states.*;
+//## auto_generated
+import com.ibm.rational.rhapsody.animcom.animMessages.*;
 
 //----------------------------------------------------------------------------
 // Default/Secours.java                                                                  
@@ -31,7 +35,14 @@ import com.ibm.rational.rhapsody.oxf.states.*;
 [[ * @since $Since]]
 */
 //## actor Secours 
-public class Secours implements RiJStateConcept {
+public class Secours implements RiJStateConcept, Animated {
+    
+    //#[ ignore
+    // Instrumentation attributes (Animation)
+    private Animate animate;
+    
+    public static AnimClass animClassSecours = new AnimClass("Default.Secours",false);
+    //#]
     
     public Reactive reactive;		//## ignore 
     
@@ -101,45 +112,95 @@ public class Secours implements RiJStateConcept {
     
     //## auto_generated 
     public  Secours(RiJThread p_thread) {
+        try {
+            animInstance().notifyConstructorEntered(animClassSecours.getUserClass(),
+               new ArgData[] {
+               });
+        
         reactive = new Reactive(p_thread);
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation envoye() 
     public void envoye() {
+        try {
+            animInstance().notifyMethodEntered("envoye",
+               new ArgData[] {
+               });
+        
         //#[ operation envoye() 
         System.out.println("Secours envoye");  
-        new EventSoigne();
+        this.gen(new EventSoigne());
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation etatAlerte() 
     public void etatAlerte() {
+        try {
+            animInstance().notifyMethodEntered("etatAlerte",
+               new ArgData[] {
+               });
+        
         //#[ operation etatAlerte() 
         System.out.println("Secours en etat alerte");
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation finMission() 
     public void finMission() {
+        try {
+            animInstance().notifyMethodEntered("finMission",
+               new ArgData[] {
+               });
+        
         //#[ operation finMission() 
         System.out.println("fin des secours");
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## operation soigne() 
     public void soigne() {
+        try {
+            animInstance().notifyMethodEntered("soigne",
+               new ArgData[] {
+               });
+        
         //#[ operation soigne() 
         unVictime.gen(new EventVictimeSecouru());   
           try {
         		TimeUnit.SECONDS.sleep(5); 
         		unVictime.gen(new EventVictimeSurvie());
-        		new EventFinMission();
+        		this.gen(new EventFinMission());
         	} catch (InterruptedException e) {
         		
         		e.printStackTrace();
         	}
         
         //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
     }
     
     //## auto_generated 
@@ -150,6 +211,14 @@ public class Secours implements RiJStateConcept {
     //## auto_generated 
     public void __setUnCentreCommandement(centreCommandement p_centreCommandement) {
         unCentreCommandement = p_centreCommandement;
+        if(p_centreCommandement != null)
+            {
+                animInstance().notifyRelationAdded("unCentreCommandement", p_centreCommandement);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unCentreCommandement");
+            }
     }
     
     //## auto_generated 
@@ -172,6 +241,7 @@ public class Secours implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnCentreCommandement() {
+        animInstance().notifyRelationCleared("unCentreCommandement");
         unCentreCommandement = null;
     }
     
@@ -183,6 +253,14 @@ public class Secours implements RiJStateConcept {
     //## auto_generated 
     public void __setUnVictime(Victime p_Victime) {
         unVictime = p_Victime;
+        if(p_Victime != null)
+            {
+                animInstance().notifyRelationAdded("unVictime", p_Victime);
+            }
+        else
+            {
+                animInstance().notifyRelationCleared("unVictime");
+            }
     }
     
     //## auto_generated 
@@ -205,6 +283,7 @@ public class Secours implements RiJStateConcept {
     
     //## auto_generated 
     public void _clearUnVictime() {
+        animInstance().notifyRelationCleared("unVictime");
         unVictime = null;
     }
     
@@ -216,7 +295,7 @@ public class Secours implements RiJStateConcept {
     }
     
     //## ignore 
-    public class Reactive extends RiJStateReactive {
+    public class Reactive extends RiJStateReactive implements AnimatedReactive {
         
         // Default constructor 
         public Reactive() {
@@ -243,6 +322,40 @@ public class Secours implements RiJStateConcept {
         //## statechart_method 
         public boolean isCompleted(int state) {
             return true;
+        }
+        
+        //## statechart_method 
+        public void rootState_add(AnimStates animStates) {
+            animStates.add("ROOT");
+            switch (rootState_subState) {
+                case EtatNormal:
+                {
+                    EtatNormal_add(animStates);
+                }
+                break;
+                case EtatAlerte:
+                {
+                    EtatAlerte_add(animStates);
+                }
+                break;
+                case Envoye:
+                {
+                    Envoye_add(animStates);
+                }
+                break;
+                case Soigne:
+                {
+                    Soigne_add(animStates);
+                }
+                break;
+                case FinMission:
+                {
+                    FinMission_add(animStates);
+                }
+                break;
+                default:
+                    break;
+            }
         }
         
         //## statechart_method 
@@ -288,6 +401,31 @@ public class Secours implements RiJStateConcept {
             return res;
         }
         
+        //## statechart_method 
+        public void Soigne_add(AnimStates animStates) {
+            animStates.add("ROOT.Soigne");
+        }
+        
+        //## statechart_method 
+        public void FinMission_add(AnimStates animStates) {
+            animStates.add("ROOT.FinMission");
+        }
+        
+        //## statechart_method 
+        public void EtatNormal_add(AnimStates animStates) {
+            animStates.add("ROOT.EtatNormal");
+        }
+        
+        //## statechart_method 
+        public void EtatAlerte_add(AnimStates animStates) {
+            animStates.add("ROOT.EtatAlerte");
+        }
+        
+        //## statechart_method 
+        public void Envoye_add(AnimStates animStates) {
+            animStates.add("ROOT.Envoye");
+        }
+        
         //## auto_generated 
         protected void initStatechart() {
             rootState_subState = RiJNonState;
@@ -306,13 +444,29 @@ public class Secours implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int EtatNormalTakeEventEtatAlerte() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("1");
+            EtatNormal_exit();
+            //#[ transition 1 
+             etatAlerte();
+            //#]
+            EtatAlerte_entDef();
+            animInstance().notifyTransitionEnded("1");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void FinMission_exit() {
             FinMissionExit();
+            animInstance().notifyStateExited("ROOT.FinMission");
         }
         
         //## statechart_method 
         public void Soigne_exit() {
             SoigneExit();
+            animInstance().notifyStateExited("ROOT.Soigne");
         }
         
         //## statechart_method 
@@ -321,6 +475,7 @@ public class Secours implements RiJStateConcept {
         
         //## statechart_method 
         public void FinMission_enter() {
+            animInstance().notifyStateEntered("ROOT.FinMission");
             rootState_subState = FinMission;
             rootState_active = FinMission;
             FinMissionEnter();
@@ -328,25 +483,15 @@ public class Secours implements RiJStateConcept {
         
         //## statechart_method 
         public void EtatAlerte_enter() {
+            animInstance().notifyStateEntered("ROOT.EtatAlerte");
             rootState_subState = EtatAlerte;
             rootState_active = EtatAlerte;
             EtatAlerteEnter();
         }
         
         //## statechart_method 
-        public int EtatNormalTakeEventEtateAlerte() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            EtatNormal_exit();
-            //#[ transition 1 
-             etatAlerte();
-            //#]
-            EtatAlerte_entDef();
-            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-            return res;
-        }
-        
-        //## statechart_method 
         public void EtatNormal_enter() {
+            animInstance().notifyStateEntered("ROOT.EtatNormal");
             rootState_subState = EtatNormal;
             rootState_active = EtatNormal;
             EtatNormalEnter();
@@ -354,6 +499,7 @@ public class Secours implements RiJStateConcept {
         
         //## statechart_method 
         public void Soigne_enter() {
+            animInstance().notifyStateEntered("ROOT.Soigne");
             rootState_subState = Soigne;
             rootState_active = Soigne;
             SoigneEnter();
@@ -392,11 +538,13 @@ public class Secours implements RiJStateConcept {
         //## statechart_method 
         public int EtatAlerteTakeEventEnvoye() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("2");
             EtatAlerte_exit();
             //#[ transition 2 
             envoye();
             //#]
             Envoye_entDef();
+            animInstance().notifyTransitionEnded("2");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -414,6 +562,7 @@ public class Secours implements RiJStateConcept {
         //## statechart_method 
         public void EtatAlerte_exit() {
             EtatAlerteExit();
+            animInstance().notifyStateExited("ROOT.EtatAlerte");
         }
         
         //## statechart_method 
@@ -424,22 +573,26 @@ public class Secours implements RiJStateConcept {
         //## statechart_method 
         public void EtatNormal_exit() {
             EtatNormalExit();
+            animInstance().notifyStateExited("ROOT.EtatNormal");
         }
         
         //## statechart_method 
         public int SoigneTakeEventFinMission() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("4");
             Soigne_exit();
             //#[ transition 4 
             finMission();
             //#]
             FinMission_entDef();
+            animInstance().notifyTransitionEnded("4");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
         public void rootState_enter() {
+            animInstance().notifyStateEntered("ROOT");
             rootStateEnter();
         }
         
@@ -472,11 +625,14 @@ public class Secours implements RiJStateConcept {
         
         //## statechart_method 
         public void rootStateEntDef() {
+            animInstance().notifyTransitionStarted("0");
             EtatNormal_entDef();
+            animInstance().notifyTransitionEnded("0");
         }
         
         //## statechart_method 
         public void Envoye_enter() {
+            animInstance().notifyStateEntered("ROOT.Envoye");
             rootState_subState = Envoye;
             rootState_active = Envoye;
             EnvoyeEnter();
@@ -489,9 +645,9 @@ public class Secours implements RiJStateConcept {
         //## statechart_method 
         public int EtatNormal_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(EventEtateAlerte.EventEtateAlerte_Default_id))
+            if(event.isTypeOf(EventEtatAlerte.EventEtatAlerte_Default_id))
                 {
-                    res = EtatNormalTakeEventEtateAlerte();
+                    res = EtatNormalTakeEventEtatAlerte();
                 }
             
             return res;
@@ -500,11 +656,13 @@ public class Secours implements RiJStateConcept {
         //## statechart_method 
         public int EnvoyeTakeEventSoigne() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("3");
             Envoye_exit();
             //#[ transition 3 
             soigne();
             //#]
             Soigne_entDef();
+            animInstance().notifyTransitionEnded("3");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -539,9 +697,91 @@ public class Secours implements RiJStateConcept {
         //## statechart_method 
         public void Envoye_exit() {
             EnvoyeExit();
+            animInstance().notifyStateExited("ROOT.Envoye");
+        }
+        
+        /**  methods added just for design level debugging instrumentation */
+        public boolean startBehavior() {
+            try {
+              animInstance().notifyBehavioralMethodEntered("startBehavior",
+                  new ArgData[] {
+                   });
+              return super.startBehavior();
+            }
+            finally {
+              animInstance().notifyMethodExit();
+            }
+        }
+        public int takeEvent(RiJEvent event) { 
+            try { 
+              //animInstance().notifyTakeEvent(new AnimEvent(event));
+              animInstance().notifyBehavioralMethodEntered("takeEvent",
+                  new ArgData[] { new ArgData(RiJEvent.class, "event", event.toString())
+                   });
+              return super.takeEvent(event); 
+            }
+            finally { 
+              animInstance().notifyMethodExit();
+            }
+        }
+        /**  see com.ibm.rational.rhapsody.animation.AnimatedReactive interface */
+        public AnimInstance animInstance() { 
+            return Secours.this.animInstance(); 
         }
         
     }
+    //#[ ignore
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimClass getAnimClass() { 
+        return animClassSecours; 
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public Object getFieldValue(java.lang.reflect.Field f, Object userInstance) { 
+         Object obj = null;
+         try {
+             obj = f.get(userInstance);
+         } catch(Exception e) {
+              java.lang.System.err.println("Exception: getting Field value: " + e);
+              e.printStackTrace();
+         }
+         return obj;
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public AnimInstance animInstance() {
+        if (animate == null) 
+            animate = new Animate(); 
+        return animate; 
+    } 
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addAttributes(AnimAttributes msg) {
+        
+    }
+    /**  see com.ibm.rational.rhapsody.animation.Animated interface */
+    public void addRelations(AnimRelations msg) {
+        
+        msg.add("unVictime", false, true, unVictime);
+        msg.add("unCentreCommandement", false, true, unCentreCommandement);
+    }
+    /** An inner class added as instrumentation for animation */
+    public class Animate extends AnimInstance { 
+        public  Animate() { 
+            super(Secours.this); 
+        } 
+        public void addAttributes(AnimAttributes msg) {
+            Secours.this.addAttributes(msg);
+        }
+        public void addRelations(AnimRelations msg) {
+            Secours.this.addRelations(msg);
+        }
+        
+        public void addStates(AnimStates msg) {
+            if ((reactive != null) && (reactive.isTerminated() == false))
+              reactive.rootState_add(msg);
+        }
+        
+    } 
+    //#]
+    
 }
 /*********************************************************************
 	File Path	: DefaultComponent/DefaultConfig/Default/Secours.java
