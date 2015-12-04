@@ -1,0 +1,10 @@
+I-Logix-RPY-Archive version 8.10.0 * 6930133
+
+- filesTable = { IRPYRawContainer 
+	- size = 3;
+	- value = "AppCitoyente.rpy" ""
+	"AppCitoyente_rpy\\Default.sbs" "Default"
+	"AppCitoyente_rpy\\DefaultComponent.cmp" "DefaultComponent"
+	
+}
+
